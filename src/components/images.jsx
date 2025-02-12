@@ -1,24 +1,14 @@
 "use client";
-import { useState, useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, CircleX, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import clsx from "clsx";
-import { motion } from "framer-motion";
-
-const images = [
-  "https://utfs.io/a/y6y21xm25u/uqSz98PYQAu5akuIa2fEGhbAfaTlLZBRWvs08FdOeKtg4C6U",
-  "https://utfs.io/a/y6y21xm25u/uqSz98PYQAu5kMu8NJhjQXDvJeyCMV96spgmFhP5abR4loHk",
-  "https://utfs.io/a/y6y21xm25u/uqSz98PYQAu53vlzi6W5LpfVjOloBU684GaX5PWF0wzYD71g",
-  "https://utfs.io/a/y6y21xm25u/uqSz98PYQAu5akuIa2fEGhbAfaTlLZBRWvs08FdOeKtg4C6U",
-  "https://utfs.io/a/y6y21xm25u/uqSz98PYQAu5kMu8NJhjQXDvJeyCMV96spgmFhP5abR4loHk",
-  "https://utfs.io/a/y6y21xm25u/uqSz98PYQAu53vlzi6W5LpfVjOloBU684GaX5PWF0wzYD71g",
-  "https://utfs.io/a/y6y21xm25u/uqSz98PYQAu5akuIa2fEGhbAfaTlLZBRWvs08FdOeKtg4C6U",
-  "https://utfs.io/a/y6y21xm25u/uqSz98PYQAu5kMu8NJhjQXDvJeyCMV96spgmFhP5abR4loHk",
-  "https://utfs.io/a/y6y21xm25u/uqSz98PYQAu53vlzi6W5LpfVjOloBU684GaX5PWF0wzYD71g",
-];
+import { images } from "@/lib/utils";
 
 export default function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [open, setOpen] = useState(false);
+  const maxThumbnails = 5;
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -28,10 +18,23 @@ export default function ImageSlider() {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  const startIndex = Math.max(
+    0,
+    Math.min(
+      currentIndex - Math.floor(maxThumbnails / 2),
+      images.length - maxThumbnails
+    )
+  );
+  const visibleThumbnails = images.slice(
+    startIndex,
+    startIndex + maxThumbnails
+  );
+
   return (
-    <div className="relative w-full max-w-lg mx-auto flex justify-center items-center flex-col">
-      <div className="flex justify-center items-center relative flex-row w-full">
-        <div className="w-full">
+    <div className="relative px-4 py-8 w-full max-w-3xl mx-auto flex justify-center items-center flex-col bg-latte rounded-3xl my-12 shadow-sm shadow-latte-dark">
+      <h3 className="text-4xl font-serif text-cappuccino mb-4">Munkáim</h3>
+      <div className="flex max-w-lg justify-center items-center relative flex-row w-full">
+        <div className="relative w-full">
           <Image
             src={images[currentIndex]}
             alt={`Slide ${currentIndex}`}
@@ -39,6 +42,9 @@ export default function ImageSlider() {
             height={400}
             className="h-80 w-full object-cover rounded-xl border-2 border-beige shadow-sm shadow-latte-dark"
           />
+          <button onClick={() => setOpen(true)}>
+            <ExternalLink className="absolute -top-1 -right-1 z-20 bg-cappuccino p-1 rounded-lg border-beige border" />
+          </button>
         </div>
         <button
           onClick={prevSlide}
@@ -54,23 +60,48 @@ export default function ImageSlider() {
         </button>
       </div>
       <div className="flex justify-center gap-2 mt-4">
-        {images.slice(currentIndex, currentIndex + 3).map((img, index) => (
-          <button key={index} onClick={() => setCurrentIndex(index)}>
+        {visibleThumbnails.map((img, index) => (
+          <button
+            key={startIndex + index}
+            onClick={() => setCurrentIndex(startIndex + index)}
+          >
             <Image
               src={img}
-              alt={`Thumbnail ${index}`}
+              alt={`Thumbnail ${startIndex + index}`}
               width={200}
               height={200}
               className={clsx(
                 "size-24 rounded-md overflow-hidden border-2 object-cover shadow-md shadow-latte-dark border-beige",
                 {
                   "border-cappuccino scale-105 transition-all":
-                    index === currentIndex,
+                    startIndex + index === currentIndex,
                 }
               )}
             />
           </button>
         ))}
+        {open && (
+          <div className="flex justify-center items-center fixed z-50 top-0 left-0 w-full h-screen backdrop-blur-sm">
+            <div className="flex flex-col relative justify-center items-center w-fit h-fit py-8 bg-latte px-8 rounded-2xl border-2 border-beige">
+              <button
+                onClick={() => setOpen(false)}
+                className="text-black absolute top-1 right-1"
+              >
+                <CircleX className="size-8 text-cappuccino hover:fill-latte-dark hover:text-cappuccino-light hover:scale-105 transition-all" />
+              </button>
+              <h3 className="text-4xl font-serif text-cappuccino mb-4">
+                Nagyított fotó
+              </h3>
+              <Image
+                src={images[currentIndex]}
+                alt="valami"
+                width={600}
+                height={600}
+                className="h-96 w-fit object-contain rounded-xl border-2 border-beige shadow-sm shadow-latte-dark"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

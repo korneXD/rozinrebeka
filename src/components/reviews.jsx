@@ -30,17 +30,17 @@ export default function Reviews() {
           <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-cream to-transparent z-10"></div>
           <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-cream to-transparent z-10"></div>
           <p className="text-cappuccino/80 text-lg px-20">
-            &apos;Az arckezelés egyszerűen isteni volt. A bőröm megújult és
+            &quot;Az arckezelés egyszerűen isteni volt. A bőröm megújult és
             ragyogó. Ajánlom mindenkinek, aki szeretné felfrissíteni és
-            megújítani bőrét!
+            megújítani bőrét!&quot;
           </p>
         </div>
         <p className="font-serif text-cappuccino italic">Zsofia B.</p>
       </div>
-      <button className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-colors">
+      <button className="absolute left-4 top-1/2 bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-colors">
         <ChevronLeft className="w-6 h-6" />
       </button>
-      <button className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-colors">
+      <button className="absolute right-4 top-1/2  bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-colors">
         <ChevronRight className="w-6 h-6" />
       </button>
     </section>

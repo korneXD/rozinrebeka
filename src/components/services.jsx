@@ -2,12 +2,15 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section className="container mx-auto px-4 py-8 bg-latte rounded-3xl max-w-5xl my-12 shadow-sm shadow-latte-dark">
+    <section
+      id="services"
+      className="container scroll-mt-2 mx-auto px-4 py-8 bg-latte rounded-3xl max-w-5xl my-12 shadow-sm shadow-latte-dark"
+    >
       <div className="text-center max-w-2xl mx-auto mb-12">
         <h3 className="text-4xl font-serif text-cappuccino mb-4">
           Szolgáltatásaim
         </h3>
-        <p className="text-cappuccino/80">
+        <p className="text-cappuccino/80 text-lg">
           Élvezd a prémium szépségkezeléseimet, amelyeket kizárólag neked
           nyújtok!
         </p>
@@ -37,8 +40,8 @@ export default function Services() {
                 <Image
                   src={service.src}
                   className="w-full h-full object-cover"
-                  height={200}
-                  width={200}
+                  height={600}
+                  width={600}
                   alt="kep"
                 />
               </div>
@@ -46,7 +49,7 @@ export default function Services() {
             <h4 className="font-serif text-xl text-cappuccino">
               {service.name}
             </h4>
-            <p className="text-cappuccino/60">{service.price}</p>
+            <p className="text-cappuccino/60 textl-xl">{service.price}</p>
           </div>
         ))}
       </div>
