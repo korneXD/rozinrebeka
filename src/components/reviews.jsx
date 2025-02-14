@@ -11,11 +11,12 @@ export default function Reviews() {
         <div className="flex justify-center gap-6 mb-8">
           <div className="w-24 h-24 overflow-hidden rounded-full border-4 border-latte-dark bg-beige">
             <Image
-              src="https://utfs.io/a/y6y21xm25u/uqSz98PYQAu5yhQdo0n6OLzfRil0nGtBTo4mZPF2QqjagWEc"
+              src="https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/sign/alapok/rebeka2.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhbGFwb2svcmViZWthMi5qcGciLCJpYXQiOjE3Mzk0Nzc5MjksImV4cCI6NDg5MzA3NzkyOX0.y-yKjrV4WmMxZ_852bY5Oc_5K9jY8nZLpwEyOs-hNa8"
               className="w-full h-full object-cover"
-              height={200}
-              width={200}
-              alt="kep"
+              height={600}
+              width={600}
+              draggable={false}
+              alt="Review"
             />
           </div>
         </div>
@@ -27,8 +28,8 @@ export default function Reviews() {
           <Star className="w-5 h-5 fill-current" />
         </div>
         <div className="relative overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-cream to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-cream to-transparent z-10"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-linear-to-r from-cream to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-linear-to-l from-cream to-transparent z-10"></div>
           <p className="text-cappuccino/80 text-lg px-20">
             &quot;Az arckezelés egyszerűen isteni volt. A bőröm megújult és
             ragyogó. Ajánlom mindenkinek, aki szeretné felfrissíteni és

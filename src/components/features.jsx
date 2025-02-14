@@ -24,7 +24,7 @@ export default function Features() {
         ].map(({ title, descr, icon: Icon }) => (
           <div
             key={title}
-            className="p-8 text-center bg-latte border-none shadow-sm shadow-latte-dark hover:shadow-md transition-shadow cursor-pointer rounded-3xl"
+            className="p-8 text-center bg-latte border-none shadow-xs shadow-latte-dark hover:shadow-md transition-shadow cursor-pointer rounded-3xl"
           >
             <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-beige flex items-center justify-center">
               <Icon className="w-8 h-8 text-cappuccino" />

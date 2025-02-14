@@ -17,16 +17,16 @@ export default function Contact() {
           <form className="space-y-4 flex items-start flex-col w-[60%]">
             <input
               placeholder="Neved"
-              className="bg-cream border-cappuccino/20 w-full py-1 px-2 rounded-lg border border-cappuccino outline-none text-cappuccino"
+              className="bg-cream border-cappuccino/20 w-full py-1 px-2 rounded-lg border border-cappuccino outline-hidden text-cappuccino"
             />
             <input
               type="email"
               placeholder="Email címed"
-              className="bg-cream border-cappuccino/20 w-full py-1 px-2 rounded-lg border border-cappuccino outline-none text-cappuccino"
+              className="bg-cream border-cappuccino/20 w-full py-1 px-2 rounded-lg border border-cappuccino outline-hidden text-cappuccino"
             />
             <textarea
               placeholder="Üzeneted nekem"
-              className="bg-cream border-cappuccino/20 resize-none w-full py-1 px-2 rounded-lg border border-cappuccino outline-none text-cappuccino"
+              className="bg-cream border-cappuccino/20 resize-none w-full py-1 px-2 rounded-lg border border-cappuccino outline-hidden text-cappuccino"
               rows={4}
             />
             <button className="bg-cappuccino font-sans font-bold py-2 text-cream hover:bg-cappuccino-light rounded-full px-4 shadow-md shadow-latte-dark text-md">
