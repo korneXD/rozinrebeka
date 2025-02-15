@@ -1,6 +1,10 @@
 import { supabase } from "@/lib/supabase";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
+
+export const config = {
+  runtime: "edge", // Edge Runtime engedélyezése
+};
 
 export async function GET() {
   const { data, error } = await supabase.storage.from("munkaim").list();
@@ -8,6 +12,7 @@ export async function GET() {
   if (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
+      headers: { "Content-Type": "application/json" },
     });
   }
 
@@ -16,5 +21,8 @@ export async function GET() {
     url: `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/munkaim/${file.name}`,
   }));
 
-  return new Response(JSON.stringify(images), { status: 200 });
+  return new Response(JSON.stringify(images), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
 }
