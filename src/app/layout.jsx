@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { description, title } from "@/lib/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,8 +13,45 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Rozin Rebeka",
-  description: "Rozin Rebeka kozmetikus",
+  title,
+  description,
+  keywords: [
+    "Website Hungary",
+    "Website development Hungary, Kecskemét",
+    "Hungary web design",
+    "Website maker Kecskemét",
+    "Custom website Kecskemét",
+  ],
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
+  ),
+  openGraph: {
+    type: "website",
+    locale: "hu_HU",
+    url: process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000",
+    title,
+    description,
+    siteName: title,
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: title,
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/opengraph-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
