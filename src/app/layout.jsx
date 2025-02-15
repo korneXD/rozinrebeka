@@ -48,10 +48,19 @@ export const metadata = {
     description,
     images: ["/opengraph-image.png"],
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+  icons: [
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      url: "/favicon.ico",
+    },
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      url: "/apple-touch-icon.png",
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
