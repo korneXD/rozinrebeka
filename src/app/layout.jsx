@@ -59,7 +59,7 @@ export const metadata = {
     {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      url: "/apple-touch-icon.png",
+      url: "/public/apple-touch-icon.png",
     },
   ],
 };
