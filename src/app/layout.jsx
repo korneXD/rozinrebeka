@@ -58,8 +58,7 @@ export const metadata = {
     },
     {
       rel: "apple-touch-icon",
-      sizes: "180x182",
-      url: "/apple-touch-icon.png",
+      url: "/favicon.ico",
     },
   ],
 };
