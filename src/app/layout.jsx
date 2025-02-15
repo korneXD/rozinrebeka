@@ -58,8 +58,9 @@ export const metadata = {
     },
     {
       rel: "apple-icon",
-
-      url: "/favicon.ico",
+      type: "image/png",
+      sizes: "32x32",
+      url: "/apple-icon.png",
     },
   ],
 };
