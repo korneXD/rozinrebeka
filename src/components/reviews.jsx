@@ -39,10 +39,16 @@ export default function Reviews() {
         </div>
         <p className="font-serif text-cappuccino italic">Zsofia B.</p>
       </div>
-      <button className="absolute left-4 top-1/2 bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-colors">
+      <button
+        aria-label="leftArrow"
+        className="absolute left-4 top-1/2 bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-colors"
+      >
         <ChevronLeft className="w-6 h-6" />
       </button>
-      <button className="absolute right-4 top-1/2  bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-colors">
+      <button
+        aria-label="rightArrow"
+        className="absolute right-4 top-1/2  bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-colors"
+      >
         <ChevronRight className="w-6 h-6" />
       </button>
     </section>

@@ -71,12 +71,14 @@ export default function ImageSlider() {
         </div>
         <button
           onClick={prevSlide}
+          aria-label="leftArrow"
           className="absolute -left-16 cursor-pointer hover:scale-105 bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-all"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
+          aria-label="rightArrow"
           className="absolute -right-16 cursor-pointer hover:scale-105 bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-all"
         >
           <ChevronRight className="w-6 h-6" />
