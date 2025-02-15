@@ -49,20 +49,9 @@ export const metadata = {
     description,
     images: ["/opengraph-image.png"],
   },
-  icons: [
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "32x32",
-      url: "/favicon.ico",
-    },
-    {
-      rel: "apple-icon",
-      type: "image/png",
-      sizes: "32x32",
-      url: "/apple-icon.png",
-    },
-  ],
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
