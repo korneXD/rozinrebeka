@@ -1,5 +1,5 @@
 import Contact from "@/components/contact";
-import Features from "@/components/features";
+import React from "react";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";

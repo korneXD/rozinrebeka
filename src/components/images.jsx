@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import { ChevronLeft, ChevronRight, CircleX, ExternalLink } from "lucide-react";
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import clsx from "clsx";
 import useSWR from "swr";
