@@ -41,8 +41,8 @@ export default function Services() {
                 <Image
                   src={service.src}
                   className="w-full h-full object-cover"
-                  height={600}
-                  width={600}
+                  height={200}
+                  width={200}
                   priority={true}
                   draggable={false}
                   alt={service.name}

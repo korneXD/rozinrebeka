@@ -14,9 +14,10 @@ export default function Reviews() {
             <Image
               src="https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/sign/alapok/rebeka2.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhbGFwb2svcmViZWthMi5qcGciLCJpYXQiOjE3Mzk0Nzc5MjksImV4cCI6NDg5MzA3NzkyOX0.y-yKjrV4WmMxZ_852bY5Oc_5K9jY8nZLpwEyOs-hNa8"
               className="w-full h-full object-cover"
-              height={600}
-              width={600}
+              height={200}
+              width={200}
               draggable={false}
+              priority={true}
               alt="Review"
             />
           </div>

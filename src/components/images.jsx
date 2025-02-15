@@ -45,19 +45,19 @@ export default function ImageSlider() {
               <Image
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex}`}
-                width={1200}
-                height={1200}
+                width={200}
+                height={200}
                 draggable={false}
-                priority
+                priority={true}
                 className="aspect-[3/2] z-10 w-lg object-contain rounded-xl border-2 border-beige shadow-xs shadow-latte-dark"
               />
               <Image
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex}`}
-                width={1200}
-                height={1200}
+                width={100}
+                height={100}
                 draggable={false}
-                priority
+                priority={true}
                 className="absolute aspect-[3/2] w-full object-cover rounded-xl blur-md p-0"
               />
             </div>
