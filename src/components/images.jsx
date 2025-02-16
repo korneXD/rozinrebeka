@@ -27,29 +27,29 @@ export default function ImageSlider() {
     0,
     Math.min(
       currentIndex - Math.floor(maxThumbnails / 2),
-      images.length - maxThumbnails
-    )
+      images.length - maxThumbnails,
+    ),
   );
   const visibleThumbnails = images.slice(
     startIndex,
-    startIndex + maxThumbnails
+    startIndex + maxThumbnails,
   );
 
   return (
-    <div className="relative px-4 py-8 w-full max-w-3xl mx-auto flex justify-center items-center flex-col bg-latte rounded-3xl my-12 shadow-xs shadow-latte-dark">
-      <h3 className="text-4xl font-serif text-cappuccino mb-4">Munkáim</h3>
-      <div className="flex max-w-lg justify-center items-center relative flex-row w-full">
-        <div className="relative w-full flex justify-center items-center">
+    <div className="bg-latte shadow-secondary-foreground relative mx-auto my-12 flex w-full max-w-3xl flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-sm">
+      <h3 className="text-cappuccino mb-4 font-serif text-4xl">Galéria</h3>
+      <div className="relative flex w-full max-w-lg flex-row items-center justify-center">
+        <div className="relative flex w-full items-center justify-center">
           {images.length > 0 && images[currentIndex] ? (
-            <div className="flex relative justify-center items-center">
+            <div className="relative flex items-center justify-center">
               <Image
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex}`}
                 width={200}
                 height={200}
                 draggable={false}
-                priority={true}
-                className="aspect-[3/2] z-10 w-lg object-contain rounded-xl border-2 border-beige shadow-xs shadow-latte-dark"
+                priority
+                className="border-beige shadow-latte-dark z-10 aspect-[3/2] h-48 w-lg rounded-xl border-2 object-contain shadow-xs md:h-72"
               />
               <Image
                 src={images[currentIndex]}
@@ -57,13 +57,13 @@ export default function ImageSlider() {
                 width={100}
                 height={100}
                 draggable={false}
-                priority={true}
-                className="absolute aspect-[3/2] w-full object-cover rounded-xl blur-md p-0"
+                priority
+                className="absolute aspect-[3/2] h-48 w-full rounded-xl object-cover p-0 blur-md md:h-72"
               />
             </div>
           ) : (
-            <div className="h-80 w-full bg-cappuccino rounded-xl animate-pulse flex justify-center items-center">
-              <span className="text-beige text-2xl italic font-serif">
+            <div className="bg-cappuccino flex h-80 w-full animate-pulse items-center justify-center rounded-xl">
+              <span className="text-beige font-serif text-2xl italic">
                 Képek betöltése...
               </span>
             </div>
@@ -72,19 +72,19 @@ export default function ImageSlider() {
         <button
           onClick={prevSlide}
           aria-label="leftArrow"
-          className="absolute -left-16 cursor-pointer hover:scale-105 bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-all"
+          className="bg-cappuccino text-cream hover:bg-cappuccino-light absolute left-2 z-10 cursor-pointer rounded-full p-2 transition-all hover:scale-105 md:-left-16"
         >
-          <ChevronLeft className="w-6 h-6" />
+          <ChevronLeft className="h-6 w-6" />
         </button>
         <button
           onClick={nextSlide}
           aria-label="rightArrow"
-          className="absolute -right-16 cursor-pointer hover:scale-105 bg-cappuccino text-cream rounded-full p-2 hover:bg-cappuccino-light transition-all"
+          className="bg-cappuccino text-cream hover:bg-cappuccino-light absolute right-2 z-10 cursor-pointer rounded-full p-2 transition-all hover:scale-105 md:-right-16"
         >
-          <ChevronRight className="w-6 h-6" />
+          <ChevronRight className="h-6 w-6" />
         </button>
       </div>
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="mt-4 flex justify-center gap-2">
         {visibleThumbnails.map((img, index) => (
           <button
             key={startIndex + index}
@@ -94,20 +94,20 @@ export default function ImageSlider() {
               <Image
                 src={img}
                 alt={`Thumbnail ${startIndex + index}`}
-                width={1200}
-                height={1200}
+                width={200}
+                height={200}
                 draggable={false}
                 priority
                 className={clsx(
-                  "size-24 cursor-pointer rounded-md overflow-hidden border-2 object-cover shadow-md shadow-latte-dark border-beige",
+                  "shadow-latte-dark border-beige size-24 cursor-pointer overflow-hidden rounded-md border-2 object-cover shadow-md",
                   {
                     "border-cappuccino scale-105 transition-all":
                       startIndex + index === currentIndex,
-                  }
+                  },
                 )}
               />
             ) : (
-              <div className="size-24 bg-gray-300 rounded-md"></div>
+              <div className="size-24 rounded-md bg-gray-300"></div>
             )}
           </button>
         ))}

@@ -9,13 +9,15 @@ import Services from "@/components/services";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-cream">
-      <Header />
-      <Hero />
-      <Services />
-      <ImageSlider />
-      <Reviews />
-      <Contact />
+    <div className="bg-cream flex min-h-screen flex-col items-center justify-center">
+      <div className="px-4">
+        <Header />
+        <Hero />
+        <Services />
+        <ImageSlider />
+        <Reviews />
+        <Contact />
+      </div>
       <Footer />
     </div>
   );

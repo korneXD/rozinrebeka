@@ -5,10 +5,10 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="container scroll-mt-2 mx-auto px-4 py-8 bg-latte rounded-3xl max-w-5xl my-12 shadow-xs shadow-latte-dark"
+      className="bg-latte shadow-secondary-foreground container mx-auto my-12 max-w-4xl scroll-mt-10 rounded-3xl px-4 py-8 shadow-xs"
     >
-      <div className="text-center max-w-2xl mx-auto mb-12">
-        <h3 className="text-4xl font-serif text-cappuccino mb-4">
+      <div className="mx-auto mb-12 max-w-2xl text-center">
+        <h3 className="text-cappuccino mb-4 font-serif text-4xl">
           Szolgáltatásaim
         </h3>
         <p className="text-cappuccino/80 text-lg">
@@ -17,7 +17,7 @@ export default function Services() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid gap-4 md:grid-cols-3">
         {[
           {
             name: "Tisztító arckezelések",
@@ -35,12 +35,15 @@ export default function Services() {
             src: "https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/sign/alapok/smink.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhbGFwb2svc21pbmsuanBnIiwiaWF0IjoxNzM5NDc3NzEyLCJleHAiOjQ4OTMwNzc3MTJ9.3yUFkvEvhC2Qgk3fHIYWqJZNID15xqwx89VXIOr5_AM",
           },
         ].map((service, i) => (
-          <div key={i} className="group cursor-pointer">
-            <div className="relative mb-4 overflow-hidden rounded-xl bg-beige aspect-3/4 shadow-xs shadow-latte-dark border-2 border-beige">
-              <div className="absolute inset-0 flex items-center justify-center text-cappuccino/30">
+          <div
+            key={i}
+            className="group flex cursor-pointer flex-col items-center justify-around"
+          >
+            <div className="bg-beige shadow-latte-dark border-beige relative mb-4 aspect-3/4 h-80 overflow-hidden rounded-xl border-2 shadow-xs">
+              <div className="text-cappuccino/30 absolute inset-0 flex items-center justify-center">
                 <Image
                   src={service.src}
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                   height={200}
                   width={200}
                   priority={true}
@@ -49,7 +52,7 @@ export default function Services() {
                 />
               </div>
             </div>
-            <h4 className="font-serif text-xl text-cappuccino">
+            <h4 className="text-cappuccino font-serif text-xl">
               {service.name}
             </h4>
             <p className="text-cappuccino/60 textl-xl">{service.price}</p>
