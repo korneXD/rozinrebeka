@@ -70,6 +70,8 @@ export default function Arlista() {
         src="https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/public/alapok//topbg.png"
         width={200}
         height={200}
+        priority
+        draggable={false}
         alt="Background Top"
         className="object-fit absolute top-0 left-0 h-42 w-fit md:h-60"
       />
@@ -77,7 +79,9 @@ export default function Arlista() {
         src="https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/public/alapok//arlistalogo.png"
         width={200}
         height={200}
-        alt="Background Top"
+        alt="Rozin Rebeka Logo"
+        priority
+        draggable={false}
         className="object-fit absolute top-0 right-0 h-20 w-fit md:h-40"
       />
       <div className="text-gold relative z-10 mb-30 flex flex-col items-center justify-center gap-2 px-4 py-10 font-serif italic">
