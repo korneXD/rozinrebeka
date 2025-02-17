@@ -4,7 +4,7 @@ import React from "react";
 export default function Contact() {
   return (
     <section
-      className="bg-latte shadow-secondary-foreground container mx-auto my-12 max-w-4xl scroll-mt-10 rounded-3xl px-4 py-16 shadow-sm"
+      className="bg-latte shadow-secondary-foreground container mx-auto my-12 w-full max-w-md scroll-mt-10 rounded-3xl px-4 py-16 shadow-sm md:max-w-4xl"
       id="contact"
     >
       <div className="grid items-start justify-center gap-12 md:grid-cols-2">
@@ -15,7 +15,7 @@ export default function Contact() {
           <p className="text-cappuccino/80">
             Várom üzeneted! Írj itt, vagy használd elérhetőségeimet.
           </p>
-          <form className="flex w-[60%] flex-col items-start space-y-4">
+          <form className="flex w-full flex-col items-start space-y-4 md:w-[60%]">
             <input
               placeholder="Neved"
               className="bg-cream border-cappuccino/20 text-cappuccino w-full rounded-lg border px-2 py-1 outline-hidden"

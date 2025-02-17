@@ -1,21 +1,31 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import { QRCode } from "react-qrcode-logo";
 
 export default function Footer() {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <footer className="bg-beige flex w-full py-12">
       <div className="container mx-auto flex flex-col items-center justify-center px-4">
-        <div className="text-cappuccino/80 flex w-full flex-wrap items-center justify-around gap-8">
-          <div className="flex flex-col items-start justify-center gap-2 text-left">
+        <div className="text-cappuccino/80 flex w-full flex-wrap items-start justify-around gap-8">
+          <div className="flex flex-col items-center justify-center gap-2 text-left md:items-start">
             <h5 className="text-cappuccino mb-4 font-medium">Elérhetőségeim</h5>
             <p>+36 70 234 5678</p>
             <p>contact@rebeka.hu</p>
           </div>
-          <div className="flex flex-col items-center justify-center gap-2">
+          <div className="flex w-full flex-col items-center justify-center gap-2 md:w-fit">
             <h5 className="text-cappuccino mb-4 font-medium">Termékek</h5>
-            <a href="#" className="hover:text-cappuccino">
-              Használd a linkem
-            </a>
+            <QRCode
+              value="Itt lesz a linkem"
+              qrStyle="fluid"
+              eyeRadius={15}
+              eyeColor="#4a3728"
+              fgColor="#6b5141"
+              bgColor="#f5efe7"
+              size={90}
+            />
             <Link href={"/arlista"} className="text-cappuccino/60 underline">
               Árlista megtekintése
             </Link>
@@ -26,7 +36,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-cappuccino/10 text-cappuccino/60 mt-8 w-full border-t pt-8 text-center text-sm">
-          2025 - Rozin Rebeka
+          {year} - Rozin Rebeka
         </div>
       </div>
     </footer>

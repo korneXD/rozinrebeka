@@ -38,7 +38,7 @@ export default function Reviews() {
   };
 
   return (
-    <section className="relative container mx-auto flex max-w-5xl px-4 py-16">
+    <section className="relative container mx-auto max-w-5xl px-4 py-16">
       <div className="mx-auto max-w-3xl space-y-8 text-center">
         <h3 className="text-cappuccino font-serif text-3xl italic">
           Vélemények Rólam
@@ -61,7 +61,7 @@ export default function Reviews() {
             <Star key={i} className="h-5 w-5 fill-current" />
           ))}
         </div>
-        <div className="flex h-full min-h-80 flex-col items-center justify-center space-y-8 overflow-hidden md:min-h-0">
+        <div className="flex h-full min-h-72 flex-col items-center justify-center space-y-8 overflow-hidden md:min-h-0">
           <motion.div
             key={index}
             initial={{ opacity: 0, x: direction * 100 }}

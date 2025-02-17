@@ -54,9 +54,9 @@ export default function Header() {
         <AnimatePresence>
           {open && (
             <motion.div
-              initial={{ opacity: 0, y: -100 }}
+              initial={{ opacity: 1, y: "-100%" }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -100 }}
+              exit={{ opacity: 1, y: "-100%" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="bg-beige shadow-secondary-foreground absolute top-0 left-0 z-10 flex w-full flex-col items-center justify-center px-2 py-2 shadow-sm"
             >

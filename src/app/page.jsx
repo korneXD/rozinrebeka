@@ -6,6 +6,7 @@ import Hero from "@/components/hero";
 import ImageSlider from "@/components/images";
 import Reviews from "@/components/reviews";
 import Services from "@/components/services";
+import Features from "@/components/features";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Header />
         <Hero />
         <Services />
+        <Features />
         <ImageSlider />
         <Reviews />
         <Contact />

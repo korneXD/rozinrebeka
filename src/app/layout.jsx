@@ -17,14 +17,14 @@ export const metadata = {
   title,
   description,
   keywords: [
-    "Website Hungary",
-    "Website development Hungary, Kecskemét",
-    "Hungary web design",
-    "Website maker Kecskemét",
-    "Custom website Kecskemét",
+    "Kozmetikus",
+    "Kozmetikus kecskemét környéke",
+    "Rozin Rebeka",
+    "Kozmetikus Izsák",
+    "Rozin Rebeka kozmetikus",
   ],
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
+    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000",
   ),
   openGraph: {
     type: "website",

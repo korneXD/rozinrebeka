@@ -1,23 +1,24 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Services() {
   return (
     <section
       id="services"
-      className="bg-latte shadow-secondary-foreground container mx-auto my-12 max-w-4xl scroll-mt-10 rounded-3xl px-4 py-8 shadow-xs"
+      className="bg-latte shadow-secondary-foreground container mx-auto my-12 flex w-full max-w-md scroll-mt-10 flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-xs md:max-w-4xl"
     >
       <div className="mx-auto mb-12 max-w-2xl text-center">
         <h3 className="text-cappuccino mb-4 font-serif text-4xl">
           Szolgáltatásaim
         </h3>
-        <p className="text-cappuccino/80 text-lg">
+        <p className="text-cappuccino/80 max-w-92 text-center text-lg md:w-full">
           Élvezd a prémium szépségkezeléseimet, amelyeket kizárólag neked
           nyújtok!
         </p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 text-center md:grid-cols-3">
         {[
           {
             name: "Tisztító arckezelések",
@@ -59,6 +60,15 @@ export default function Services() {
           </div>
         ))}
       </div>
+      <p className="text-cappuccino mt-10 font-serif text-lg">
+        És még sok más!
+      </p>
+      <Link
+        href={"/arlista"}
+        className="text-cappuccino font-serif text-lg underline"
+      >
+        Árlista megtekintése
+      </Link>
     </section>
   );
 }

@@ -1,69 +1,8 @@
+import { arlista } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Arlista() {
-  const arlista = [
-    {
-      title: "Arckezelések",
-      descr: "Bőrtípusnak megfelelő arckezelés masszázzsal (60perc)",
-      price: "12000ft",
-    },
-    {
-      title: "",
-      descr: "Luxus arckezelés masszázzsal alga pakolás (80perc)",
-      price: "15000ft",
-    },
-    {
-      title: "",
-      descr: "Mindent bele arckezelés",
-      price: "12000ft",
-    },
-    {
-      title: "Arckezelések kúraszerűen",
-      descr: "Savas hámlasztás 4-6 alkalom (60perc)",
-      price: "14000ft",
-    },
-    {
-      title: "",
-      descr: "Thermage fiatalító kezelés 3-6 alkalom (60-90perc)",
-      price: "18000ft",
-    },
-    {
-      title: "",
-      descr: "Hollywoodi peeling 3-6 alkalom (60-90perc)",
-      price: "20000ft",
-    },
-    {
-      title: "Sminktetoválás",
-      descr: "Szemöldök tetoválás soft powder",
-      price: "60000ft",
-    },
-    {
-      title: "",
-      descr: "Ajaktetoválás",
-      price: "70000ft",
-    },
-    {
-      title: "",
-      descr: "Szemhéjtetoválás púderes",
-      price: "50000ft",
-    },
-    {
-      title: "",
-      descr: "Szemhéjtus sminktetoválás",
-      price: "30000ft",
-    },
-    {
-      title: "",
-      descr: "Tetoválás eltávolítás lézergéppel",
-      price: "10000ft",
-    },
-    {
-      title: "",
-      descr: "Tetoválás eltávolítás lézergéppel",
-      price: "10000ft",
-    },
-  ];
   return (
     <section className="bg-cream relative flex min-h-screen w-full items-start justify-center">
       <Image
@@ -112,7 +51,8 @@ export default function Arlista() {
         ))}
       </div>
       <p className="text-gold absolute bottom-4 z-10 font-serif text-xl italic">
-        Az árak forintban értendők. 2025 január 6-tól érvényesek
+        Az árak forintban értendők.
+        <br /> 2025 január 6-tól érvényesek
       </p>
       <Image
         src="https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/public/alapok//bottombg.png"
