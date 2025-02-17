@@ -115,7 +115,9 @@ export default function Arlista() {
         src="https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/public/alapok//bottombg.png"
         width={200}
         height={200}
-        alt="Background Top"
+        alt="Background Bottom"
+        draggable={false}
+        priority
         className="object-fit absolute right-0 bottom-0 h-42 w-fit md:h-60"
       />
     </section>
