@@ -10,7 +10,7 @@ export default function Header() {
 
   const routes = [
     { name: "Szolgáltatásaim", path: "#services" },
-    { name: "Termékek", path: "#" },
+    { name: "Árlista", path: "/arlista" },
     { name: "Elérhetőség", path: "#contact" },
   ];
 

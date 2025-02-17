@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Hero() {
@@ -12,9 +13,12 @@ export default function Hero() {
           <p className="text-cappuccino/80 text-lg">
             Luxus bőrápolási kezelések, amelyek kiemelik egyedi szépséged!
           </p>
-          <button className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark rounded-full px-8 py-2 font-sans font-bold shadow-md">
+          <Link
+            href={"#contact"}
+            className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark rounded-full px-8 py-2 font-sans font-bold shadow-md"
+          >
             Időpontfoglalás
-          </button>
+          </Link>
         </div>
         <div className="lg:col-span-2">
           <div className="relative mx-auto h-64 w-64">
