@@ -111,6 +111,9 @@ export default function Arlista() {
           </div>
         ))}
       </div>
+      <p className="text-gold absolute bottom-4 z-10 font-serif text-xl italic">
+        Az árak forintban értendők. 2025 január 6-tól érvényesek
+      </p>
       <Image
         src="https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/public/alapok//bottombg.png"
         width={200}
