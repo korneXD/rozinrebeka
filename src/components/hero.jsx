@@ -21,7 +21,7 @@ export default function Hero() {
           </Link>
         </div>
         <div className="lg:col-span-2">
-          <div className="relative mx-auto h-64 w-64">
+          <div className="relative mx-auto size-52 md:size-64">
             <div className="bg-latte shadow-secondary-foreground absolute inset-0 rounded-full shadow-md"></div>
             <div className="bg-beige absolute inset-2 flex items-center justify-center overflow-hidden rounded-full">
               <Image
@@ -34,7 +34,7 @@ export default function Hero() {
                 alt="Hero"
               />
             </div>
-            <div className="bg-cappuccino shadow-latte-dark absolute -right-4 -bottom-4 flex h-24 w-24 items-center justify-center rounded-full shadow-xs">
+            <div className="bg-cappuccino shadow-latte-dark absolute -right-4 -bottom-4 flex size-20 items-center justify-center rounded-full shadow-xs md:size-24">
               <span className="text-cream font-serif text-xl">Rebeka</span>
             </div>
           </div>

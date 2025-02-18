@@ -51,7 +51,7 @@ export default function Reviews() {
               height={200}
               width={200}
               draggable={false}
-              priority
+              loading="lazy"
               alt="Review"
             />
           </div>

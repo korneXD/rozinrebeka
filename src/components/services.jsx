@@ -47,8 +47,8 @@ export default function Services() {
                   className="h-full w-full object-cover"
                   height={200}
                   width={200}
-                  priority={true}
                   draggable={false}
+                  loading="lazy"
                   alt={service.name}
                 />
               </div>
