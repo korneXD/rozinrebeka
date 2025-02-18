@@ -20,6 +20,7 @@
     "react-dom": "^19.0.0",
     "react-qr-code": "^2.0.15",
     "react-qrcode-logo": "^3.0.0",
+    "sharp": "^0.33.5",
     "stimulus-use": "^0.52.3",
     "swr": "^2.3.2",
     "tailwind-merge": "^3.0.1"

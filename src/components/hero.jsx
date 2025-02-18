@@ -25,7 +25,7 @@ export default function Hero() {
             <div className="bg-latte shadow-secondary-foreground absolute inset-0 rounded-full shadow-md"></div>
             <div className="bg-beige absolute inset-2 flex items-center justify-center overflow-hidden rounded-full">
               <Image
-                src="https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/public/alapok//hero.png"
+                src="https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//hero.webp"
                 className="h-full w-full object-cover"
                 height={200}
                 width={200}

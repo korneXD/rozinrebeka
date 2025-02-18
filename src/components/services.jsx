@@ -23,17 +23,17 @@ export default function Services() {
           {
             name: "Tisztító arckezelések",
             price: "14.500 Ft-tól",
-            src: "https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/sign/alapok/arc.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhbGFwb2svYXJjLmpwZyIsImlhdCI6MTczOTQ3NzczMywiZXhwIjo0ODkzMDc3NzMzfQ.bPlrsrbzrRvo32lrmLn8y45SeoHXcxg0lIVh040wjFM",
+            src: "https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//arc.webp",
           },
           {
             name: "Sminktetoválás",
             price: "30.000 Ft-tól",
-            src: "https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/sign/alapok/tetko.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhbGFwb2svdGV0a28uanBnIiwiaWF0IjoxNzM5NDc3NTgwLCJleHAiOjQ4OTMwNzc1ODB9.oghrfKEU3M2mig1G2kOgo4qnczdp7MYlOEyjp4l6lMY",
+            src: "https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//tetko.webp",
           },
           {
             name: "Smink",
             price: "8.000 Ft-tól",
-            src: "https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/sign/alapok/smink.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhbGFwb2svc21pbmsuanBnIiwiaWF0IjoxNzM5NDc3NzEyLCJleHAiOjQ4OTMwNzc3MTJ9.3yUFkvEvhC2Qgk3fHIYWqJZNID15xqwx89VXIOr5_AM",
+            src: "https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//smink.webp",
           },
         ].map((service, i) => (
           <div

@@ -46,7 +46,7 @@ export default function Reviews() {
         <div className="mb-8 flex justify-center gap-6">
           <div className="border-latte-dark bg-beige h-24 w-24 overflow-hidden rounded-full border-4">
             <Image
-              src="https://gqkxxmoklignzqbjofsz.supabase.co/storage/v1/object/sign/alapok/rebeka2.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhbGFwb2svcmViZWthMi5qcGciLCJpYXQiOjE3Mzk0Nzc5MjksImV4cCI6NDg5MzA3NzkyOX0.y-yKjrV4WmMxZ_852bY5Oc_5K9jY8nZLpwEyOs-hNa8"
+              src="https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//rebeka2.webp"
               className="h-full w-full object-cover"
               height={200}
               width={200}

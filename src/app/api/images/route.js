@@ -3,7 +3,7 @@ import { supabase } from "@/lib/supabase";
 export const revalidate = 86400;
 
 export const config = {
-  runtime: "edge", // Edge Runtime engedélyezése
+  runtime: "edge",
 };
 
 export async function GET() {
