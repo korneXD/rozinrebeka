@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
 export default function Services() {
   return (
@@ -40,7 +41,7 @@ export default function Services() {
             key={i}
             className="group flex cursor-pointer flex-col items-center justify-around"
           >
-            <div className="bg-beige shadow-latte-dark border-beige relative mb-4 aspect-3/4 h-80 overflow-hidden rounded-xl border-2 shadow-xs">
+            <div className="bg-beige shadow-latte-dark border-beige relative mb-4 aspect-3/4 h-64 overflow-hidden rounded-xl border-2 shadow-xs md:h-80">
               <div className="text-cappuccino/30 absolute inset-0 flex items-center justify-center">
                 <Image
                   src={service.src}
@@ -48,6 +49,8 @@ export default function Services() {
                   height={200}
                   width={200}
                   draggable={false}
+                  quality={75}
+                  unoptimized={true}
                   loading="lazy"
                   alt={service.name}
                 />
@@ -65,9 +68,10 @@ export default function Services() {
       </p>
       <Link
         href={"/arlista"}
-        className="text-cappuccino font-serif text-lg underline"
+        className="text-cappuccino flex items-center justify-center gap-2 font-serif text-lg underline"
       >
-        Árlista megtekintése
+        <p>Árlista megtekintése</p>
+        <ExternalLink className="text-cappuccino size-5 font-serif" />
       </Link>
     </section>
   );

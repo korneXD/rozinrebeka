@@ -17,16 +17,26 @@ export default function Footer() {
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-2 md:w-fit">
             <h5 className="text-cappuccino mb-4 font-medium">Termékek</h5>
+            <Link
+              href={"https://rozinrebeka.wellu.eu/register.html?__country=HU"}
+              target="_blank"
+              className="text-cappuccino/60 font-serif underline"
+            >
+              Link
+            </Link>
             <QRCode
-              value="Itt lesz a linkem"
-              qrStyle="fluid"
+              value="https://rozinrebeka.wellu.eu/register.html?__country=HU"
+              qrStyle="square"
               eyeRadius={15}
               eyeColor="#4a3728"
               fgColor="#6b5141"
               bgColor="#f5efe7"
-              size={90}
+              size={100}
             />
-            <Link href={"/arlista"} className="text-cappuccino/60 underline">
+            <Link
+              href={"/arlista"}
+              className="text-cappuccino/60 font-serif underline"
+            >
               Árlista megtekintése
             </Link>
           </div>
