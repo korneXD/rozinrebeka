@@ -30,6 +30,7 @@ export default function Hero() {
                 height={200}
                 width={200}
                 priority
+                quality={75}
                 draggable={false}
                 alt="Hero"
               />

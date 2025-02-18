@@ -45,14 +45,12 @@ export default function Services() {
               <div className="text-cappuccino/30 absolute inset-0 flex items-center justify-center">
                 <Image
                   src={service.src}
-                  className="h-full w-full object-cover"
-                  height={200}
-                  width={200}
-                  draggable={false}
-                  quality={75}
-                  unoptimized={true}
-                  loading="lazy"
                   alt={service.name}
+                  width={200}
+                  height={200}
+                  className="object-cover"
+                  draggable={false}
+                  loading="lazy"
                 />
               </div>
             </div>
