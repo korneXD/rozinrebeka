@@ -29,7 +29,7 @@ export default function Hero() {
                 className="h-full w-full object-cover"
                 height={200}
                 width={200}
-                priority={true}
+                priority
                 draggable={false}
                 alt="Hero"
               />

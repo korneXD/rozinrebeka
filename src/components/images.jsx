@@ -48,8 +48,6 @@ export default function ImageSlider() {
                 width={200}
                 height={200}
                 draggable={false}
-                quality={75}
-                unoptimized={true}
                 loading="lazy"
                 className="border-beige shadow-latte-dark z-10 aspect-[3/2] h-48 w-lg rounded-xl border-2 object-contain shadow-xs md:h-72"
               />
@@ -59,8 +57,6 @@ export default function ImageSlider() {
                 width={100}
                 height={100}
                 draggable={false}
-                quality={75}
-                unoptimized={true}
                 loading="lazy"
                 className="absolute aspect-[3/2] h-48 w-full rounded-xl object-cover p-0 blur-md md:h-72"
               />
@@ -102,8 +98,6 @@ export default function ImageSlider() {
                 height={200}
                 draggable={false}
                 loading="lazy"
-                quality={75}
-                unoptimized={true}
                 className={clsx(
                   "shadow-latte-dark border-beige size-24 cursor-pointer overflow-hidden rounded-md border-2 object-cover shadow-md",
                   {
