@@ -18,7 +18,6 @@ export async function GET() {
 
   const images = data.map((file) => ({
     name: file.name,
-    url: `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/munkaim/${file.name}`,
   }));
 
   return new Response(JSON.stringify(images), {

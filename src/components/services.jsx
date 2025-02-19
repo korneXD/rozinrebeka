@@ -24,17 +24,17 @@ export default function Services() {
           {
             name: "Tisztító arckezelések",
             price: "14.500 Ft-tól",
-            src: "https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//arc.webp",
+            src: "arc.webp",
           },
           {
             name: "Sminktetoválás",
             price: "30.000 Ft-tól",
-            src: "https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//tetko.webp",
+            src: "tetko.webp",
           },
           {
             name: "Smink",
             price: "8.000 Ft-tól",
-            src: "https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//smink.webp",
+            src: "smink.webp",
           },
         ].map((service, i) => (
           <div
@@ -44,7 +44,7 @@ export default function Services() {
             <div className="bg-beige shadow-latte-dark border-beige relative mb-4 aspect-3/4 h-64 overflow-hidden rounded-xl border-2 shadow-xs md:h-80">
               <div className="text-cappuccino/30 absolute inset-0 flex items-center justify-center">
                 <Image
-                  src={service.src}
+                  src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//${service.src}`}
                   className="h-full w-full object-cover"
                   height={200}
                   width={200}
@@ -57,7 +57,7 @@ export default function Services() {
             <h4 className="text-cappuccino font-serif text-xl">
               {service.name}
             </h4>
-            <p className="text-cappuccino/60 textl-xl">{service.price}</p>
+            <p className="text-cappuccino/60 text-xl">{service.price}</p>
           </div>
         ))}
       </div>

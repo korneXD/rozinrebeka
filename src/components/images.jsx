@@ -13,7 +13,12 @@ export default function ImageSlider() {
 
   const { data } = useSWR("/api/images", fetcher);
   const images =
-    data && Array.isArray(data) ? data.map((item) => item.url) : [];
+    data && Array.isArray(data)
+      ? data.map(
+          (item) =>
+            `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/munkaim/${item.name}`,
+        )
+      : [];
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));

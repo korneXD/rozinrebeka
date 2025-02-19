@@ -1,7 +1,34 @@
+"use client";
+
 import { Mail, MapPin, Phone } from "lucide-react";
-import React from "react";
+import { motion, useInView } from "framer-motion";
+import React, { useState, useRef } from "react";
+import sendEmail from "@/emails/sendEmail";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await sendEmail(formData);
+      setFormData({ name: "", email: "", message: "" });
+      nameRef.current.value = "";
+      emailRef.current.value = "";
+      messageRef.current.value = "";
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <section
       className="bg-latte shadow-secondary-foreground container mx-auto my-12 w-full max-w-md scroll-mt-10 rounded-3xl px-4 py-16 shadow-sm md:max-w-4xl"
@@ -15,22 +42,43 @@ export default function Contact() {
           <p className="text-cappuccino/80">
             Várom üzeneted! Írj itt, vagy használd elérhetőségeimet.
           </p>
-          <form className="flex w-full flex-col items-start space-y-4 md:w-[60%]">
+          <form
+            onSubmit={handleSubmit}
+            className="flex w-full flex-col items-start space-y-4 md:w-[60%]"
+          >
             <input
+              required
+              ref={nameRef}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
               placeholder="Neved"
               className="bg-cream border-cappuccino/20 text-cappuccino w-full rounded-lg border px-2 py-1 outline-hidden"
             />
             <input
+              required
+              ref={emailRef}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               type="email"
               placeholder="Email címed"
               className="bg-cream border-cappuccino/20 text-cappuccino w-full rounded-lg border px-2 py-1 outline-hidden"
             />
             <textarea
+              required
+              ref={messageRef}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
               placeholder="Üzeneted nekem"
               className="bg-cream border-cappuccino/20 text-cappuccino w-full resize-none rounded-lg border px-2 py-1 outline-hidden"
               rows={4}
             />
-            <button className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark text-md mx-auto w-fit rounded-full px-4 py-2 font-sans font-bold shadow-md">
+            <button
+              type="submit"
+              className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark text-md mx-auto w-fit cursor-pointer rounded-full px-4 py-2 font-sans font-bold shadow-md"
+            >
               Küldd el nekem!
             </button>
           </form>

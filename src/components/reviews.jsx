@@ -46,7 +46,7 @@ export default function Reviews() {
         <div className="mb-8 flex justify-center gap-6">
           <div className="border-latte-dark bg-beige h-24 w-24 overflow-hidden rounded-full border-4">
             <Image
-              src="https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//rebeka2.webp"
+              src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//rebeka2.webp`}
               className="h-full w-full object-cover"
               height={200}
               width={200}

@@ -6,7 +6,7 @@ export default function Arlista() {
   return (
     <section className="bg-cream relative flex min-h-screen w-full items-start justify-center">
       <Image
-        src="https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//topbg.webp"
+        src={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//topbg.webp`}
         width={200}
         height={200}
         priority
@@ -15,7 +15,7 @@ export default function Arlista() {
         className="object-fit absolute top-0 left-0 h-42 w-fit md:h-60"
       />
       <Image
-        src="https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//arlistalogo.webp"
+        src={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//arlistalogo.webp`}
         width={200}
         height={200}
         alt="Rozin Rebeka Logo"
@@ -55,7 +55,7 @@ export default function Arlista() {
         <br /> 2025 január 6-tól érvényesek
       </p>
       <Image
-        src="https://pskwihdbzhlxchuwxken.supabase.co/storage/v1/object/public/alapok//bottombg.webp"
+        src={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//bottombg.webp`}
         width={200}
         height={200}
         alt="Background Bottom"

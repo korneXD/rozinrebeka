@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="bg-beige flex w-full py-12">
       <div className="container mx-auto flex flex-col items-center justify-center px-4">
         <div className="text-cappuccino/80 flex w-full flex-wrap items-start justify-around gap-8">
-          <div className="flex w-1/3 flex-col items-center justify-center gap-2 text-left md:items-start">
+          <div className="flex w-full flex-col items-center justify-center gap-2 text-left md:w-1/3 md:items-start">
             <h5 className="text-cappuccino mb-4 font-medium">Elérhetőségeim</h5>
             <div className="flex items-center justify-center gap-2">
               <Phone className="h-5 w-5" />
@@ -20,6 +20,10 @@ export default function Footer() {
             <div className="flex items-center justify-center gap-2">
               <Mail className="h-5 w-5" />
               <p>rebeka.kozmetikus88@gmail.com</p>
+            </div>
+            <div className="flex items-center justify-center gap-2 md:hidden">
+              <MapPin className="h-5 w-5" />
+              <p>Izsák Arany János utca 2</p>
             </div>
           </div>
           <div className="flex w-1/3 flex-col items-center justify-center gap-2 md:w-fit">
@@ -42,12 +46,12 @@ export default function Footer() {
             />
             <Link
               href={"/arlista"}
-              className="text-cappuccino/60 font-serif underline"
+              className="text-cappuccino/60 text-center font-serif underline"
             >
               Árlista megtekintése
             </Link>
           </div>
-          <div className="flex w-1/3 flex-col items-center justify-center gap-2 md:items-end">
+          <div className="hidden w-full flex-col items-center justify-center gap-2 md:flex md:w-1/3 md:items-end">
             <h5 className="text-cappuccino mb-4 font-medium">Szalon</h5>
             <div className="flex items-center justify-center gap-2">
               <MapPin className="h-5 w-5" />
