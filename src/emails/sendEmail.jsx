@@ -14,7 +14,7 @@ export default async function sendEmail(formData) {
   try {
     await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "korcika2005@gmail.com",
+      to: "rebeka.kozmetikus88@gmail.com",
       subject: "Weboldal üzenet: Rozin Rebeka - " + name + " - " + email,
       react: Email({ name: name, from: email, message: message }),
     });

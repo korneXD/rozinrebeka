@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-latte shadow-secondary-foreground container mx-auto my-12 flex w-full max-w-md scroll-mt-10 flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-xs md:max-w-4xl"
+      className="bg-latte shadow-secondary-foreground container mx-auto my-12 flex w-full max-w-md scroll-mt-10 flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-xs select-none md:max-w-4xl"
     >
       <div className="mx-auto mb-12 max-w-2xl text-center">
         <h3 className="text-cappuccino mb-4 font-serif text-4xl">

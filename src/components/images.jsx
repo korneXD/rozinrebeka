@@ -41,7 +41,7 @@ export default function ImageSlider() {
   );
 
   return (
-    <section className="bg-latte shadow-secondary-foreground relative mx-auto my-12 flex w-fit max-w-4xl flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-sm select-none md:w-full">
+    <section className="bg-latte shadow-secondary-foreground relative mx-auto my-12 flex w-fit max-w-3xl flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-sm select-none md:w-full">
       <h3 className="text-cappuccino mb-4 font-serif text-4xl">Galéria</h3>
       <div className="relative flex w-full max-w-lg flex-row items-center justify-center">
         <div className="relative flex w-full items-center justify-center">

@@ -9,18 +9,33 @@ export default function Reviews() {
   const reviews = [
     {
       review:
-        "Az arckezelés egyszerűen isteni volt. A bőröm megújult és ragyogó. Ajánlom mindenkinek, aki szeretné felfrissíteni és megújítani bőrét!",
-      author: "Zsofia B.",
+        "Köszönöm szépen Drága Rebim hogy ilyen jól rendbe hoztad az arcom. Imádom veled az összes együtt töltött percet, köszönöm hogy vagy nekem!!!",
+      author: "Bernadett Polyák",
     },
     {
       review:
-        "Nagyon elégedett vagyok a kezeléssel! Professzionális és barátságos kiszolgálás. Máskor is jövök!",
-      author: "Katalin V.",
+        "Nagyon tetszik, ahogy Rebi szebbnél szebb tetoválásokat készít. Ajánlani tudom mindenkinek.",
+      author: "Éva Csizmadiáné",
     },
     {
       review:
-        "A kezelés fantasztikus volt, a bőröm sokkal puhább és hidratáltabb lett! Nagyon kedves, humoros, mindenkinek ajánlom!",
-      author: "Andrea M.",
+        "Rebi arckezelése isteni. Jó termékekkel dolgozik és a szakmai hozzáértése sem elhanyagolható. Nyugodt szívvel ajánlom mindenkinek.",
+      author: "Borsos-Szabó Kitti",
+    },
+    {
+      review:
+        "Ismét fantasztikus kezelésben volt részem. Rebekánál az arcmasszázs olyan, mint egy csodálatosan megkomponált táncelőadás. Emellett pedig mindig ellát személyre szabott, hasznos tanácsokkal, amiért külön hálás vagyok.",
+      author: "Ágnes Mezeiné Losonczi",
+    },
+    {
+      review:
+        "Rebeka tökéletes kozmetikus és jó anyagokkal dolgozik precíz naprakész és fantasztikus munkájai vannak egy szóval a legjobb kezek közt szépülünk és mindig feldobja a napunkat.",
+      author: "Éva Szöllősiné Oláh",
+    },
+    {
+      review:
+        "Az elrontott tetoválásom javította Rebi. Mint emberileg, mint szakmailag nálam 5*! Bàtran ajánlom mindenkinek!",
+      author: "Alexandra Tóth",
     },
   ];
 
@@ -38,7 +53,7 @@ export default function Reviews() {
   };
 
   return (
-    <section className="relative container mx-auto max-w-5xl px-4 py-16">
+    <section className="relative container mx-auto h-full max-w-5xl px-0 py-8 md:px-4">
       <div className="mx-auto max-w-3xl space-y-8 text-center">
         <h3 className="text-cappuccino font-serif text-3xl italic">
           Vélemények Rólam
@@ -61,38 +76,40 @@ export default function Reviews() {
             <Star key={i} className="h-5 w-5 fill-current" />
           ))}
         </div>
-        <div className="flex h-full min-h-72 flex-col items-center justify-center space-y-8 overflow-hidden md:min-h-0">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: direction * 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -direction * 100 }}
-            transition={{ duration: 0.5 }}
-            className="h-full w-full text-center"
+        <div className="relative flex min-h-[170px] items-center justify-center">
+          <button
+            aria-label="leftArrow"
+            onClick={handlePrev}
+            className="bg-cappuccino text-cream hover:bg-cappuccino-light absolute top-0 left-4 cursor-pointer rounded-full p-2 transition-all hover:scale-105"
           >
-            <p className="text-cappuccino/80 text-md px-20 md:text-lg">
-              "{reviews[index].review}"
-            </p>
-            <p className="text-cappuccino mt-4 font-serif text-xl italic">
-              {reviews[index].author}
-            </p>
-          </motion.div>
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <div className="flex h-full min-h-72 flex-col items-center justify-start space-y-8 overflow-hidden md:min-h-0">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: direction * 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -direction * 100 }}
+              transition={{ duration: 0.5 }}
+              className="h-full w-full text-center"
+            >
+              <p className="text-cappuccino/80 text-md px-20 md:text-lg">
+                "{reviews[index].review}"
+              </p>
+              <p className="text-cappuccino mt-4 font-serif text-xl italic">
+                {reviews[index].author}
+              </p>
+            </motion.div>
+          </div>
+          <button
+            aria-label="rightArrow"
+            onClick={handleNext}
+            className="bg-cappuccino text-cream hover:bg-cappuccino-light absolute top-0 right-4 cursor-pointer rounded-full p-2 transition-all hover:scale-105"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
         </div>
       </div>
-      <button
-        aria-label="leftArrow"
-        onClick={handlePrev}
-        className="bg-cappuccino text-cream hover:bg-cappuccino-light absolute top-1/2 left-4 cursor-pointer rounded-full p-2 transition-all hover:scale-105"
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      <button
-        aria-label="rightArrow"
-        onClick={handleNext}
-        className="bg-cappuccino text-cream hover:bg-cappuccino-light absolute top-1/2 right-4 cursor-pointer rounded-full p-2 transition-all hover:scale-105"
-      >
-        <ChevronRight className="h-6 w-6" />
-      </button>
     </section>
   );
 }

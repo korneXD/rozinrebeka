@@ -1,32 +1,45 @@
 "use client";
+import { Sparkles } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { QRCode } from "react-qrcode-logo";
 
 export default function Features() {
   return (
-    <section className="bg-latte shadow-secondary-foreground relative mx-auto my-12 flex w-fit max-w-4xl flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-sm select-none md:w-full">
-      <h1 className="text-cappuccino text-center font-serif text-2xl">
-        Használd a linkem termékek rendeléséhez!
-      </h1>
-      <Link
-        href={"https://rozinrebeka.wellu.eu/register.html?__country=HU"}
-        target="_blank"
-        className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark my-4 rounded-full px-8 py-2 font-serif font-bold tracking-wide shadow-md"
-      >
-        Link
-      </Link>
-      <p className="text-cappuccino text-center font-serif text-xl">
-        Vagy olvasd be a QR kódot!
-      </p>
-      <QRCode
-        value="https://rozinrebeka.wellu.eu/register.html?__country=HU"
-        qrStyle="square"
-        eyeRadius={15}
-        eyeColor="#4a3728"
-        fgColor="#6b5141"
-        bgColor="#e6dccd"
-      />
+    <section className="bg-latte shadow-secondary-foreground relative mx-auto my-12 flex w-fit max-w-2xl flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-sm select-none md:w-full md:flex-row">
+      <div className="relative flex w-full items-center justify-center md:w-2/3">
+        <Sparkles className="text-cream absolute -top-3 -left-3 size-12 rotate-20" />
+        <Sparkles className="text-cream absolute -right-3 -bottom-3 size-12 -rotate-20 md:right-12" />
+        <p className="text-cappuccino z-10 text-center font-serif text-xl">
+          “Személyre szabott arcápolási rutin professzionális termékekkel!
+          Fedezd fel a Larens prémium minőségű bőrápolási termékeit, és élvezd a
+          hatékony, tudományosan fejlesztett formulákat. Regisztrálj az alábbi
+          linken, és rendeld meg kedvenceidet kényelmesen, házhoz szállítással!”
+        </p>
+      </div>
+      <div className="flex w-full flex-col items-center justify-center md:w-1/3">
+        <h1 className="text-cappuccino mt-10 text-center font-serif text-xl md:mt-0">
+          Használd a linkem,
+        </h1>
+        <Link
+          href={"https://rozinrebeka.wellu.eu/register.html?__country=HU"}
+          target="_blank"
+          className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark my-4 rounded-full px-8 py-2 font-sans font-bold tracking-wide shadow-md"
+        >
+          Link
+        </Link>
+        <p className="text-cappuccino text-center font-serif text-xl">
+          vagy olvasd be a QR kódot!
+        </p>
+        <QRCode
+          value="https://rozinrebeka.wellu.eu/register.html?__country=HU"
+          qrStyle="square"
+          eyeRadius={15}
+          eyeColor="#4a3728"
+          fgColor="#6b5141"
+          bgColor="#e6dccd"
+        />
+      </div>
     </section>
   );
 }

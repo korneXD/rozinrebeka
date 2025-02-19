@@ -13,14 +13,20 @@ export default function Footer() {
         <div className="text-cappuccino/80 flex w-full flex-wrap items-start justify-around gap-8">
           <div className="flex w-full flex-col items-center justify-center gap-2 text-left md:w-1/3 md:items-start">
             <h5 className="text-cappuccino mb-4 font-medium">Elérhetőségeim</h5>
-            <div className="flex items-center justify-center gap-2">
+            <Link
+              href="tel:+36 20 217 0977"
+              className="flex items-center justify-center gap-2"
+            >
               <Phone className="h-5 w-5" />
               <p>+36 20 217 0977</p>
-            </div>
-            <div className="flex items-center justify-center gap-2">
+            </Link>
+            <Link
+              href="mailto:rebeka.kozmetikus88@gmail.com"
+              className="flex items-center justify-center gap-2"
+            >
               <Mail className="h-5 w-5" />
               <p>rebeka.kozmetikus88@gmail.com</p>
-            </div>
+            </Link>
             <div className="flex items-center justify-center gap-2 md:hidden">
               <MapPin className="h-5 w-5" />
               <p>Izsák Arany János utca 2</p>
@@ -55,7 +61,7 @@ export default function Footer() {
             <h5 className="text-cappuccino mb-4 font-medium">Szalon</h5>
             <div className="flex items-center justify-center gap-2">
               <MapPin className="h-5 w-5" />
-              <p>Izsák Arany János utca 2</p>
+              <p>Izsák, Arany János utca 2</p>
             </div>
           </div>
         </div>
