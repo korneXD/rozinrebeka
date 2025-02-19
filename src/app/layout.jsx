@@ -1,6 +1,7 @@
 import "./globals.css";
 import { description, title } from "@/lib/constants";
 import React from "react";
+import { Toaster } from "sonner";
 
 export const metadata = {
   title,
@@ -46,7 +47,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="hu" className="scroll-smooth">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <Toaster
+          toastOptions={{
+            unstyled: true,
+            classNames: {
+              success:
+                "flex w-full border font-serif border-cappuccino justify-start px-4 items-center text-xl text-black gap-2 bg-beige rounded-xl py-4",
+            },
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import clsx from "clsx";
 import useSWR from "swr";
+import { motion, useInView } from "motion/react";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -40,8 +41,16 @@ export default function ImageSlider() {
     startIndex + maxThumbnails,
   );
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <section className="bg-latte shadow-secondary-foreground relative mx-auto my-12 flex w-fit max-w-3xl flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-sm select-none md:w-full">
+    <motion.section
+      ref={ref}
+      animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="bg-latte shadow-secondary-foreground relative mx-auto my-12 flex w-fit max-w-3xl flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-sm select-none md:w-full"
+    >
       <h3 className="text-cappuccino mb-4 font-serif text-4xl">Galéria</h3>
       <div className="relative flex w-full max-w-lg flex-row items-center justify-center">
         <div className="relative flex w-full items-center justify-center">
@@ -117,6 +126,6 @@ export default function ImageSlider() {
           </button>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

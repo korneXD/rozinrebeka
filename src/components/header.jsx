@@ -3,7 +3,7 @@
 import { AlignJustify, CircleX } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -31,17 +31,28 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="container mx-auto flex items-center justify-between px-4 py-6">
+    <motion.header
+      initial={{ y: "-100%", opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.1, duration: 0.8 }}
+      className="container mx-auto flex items-center justify-between px-4 py-6"
+    >
       <h1 className="text-cappuccino font-serif text-3xl">Rozin Rebeka</h1>
       <nav className="text-cappuccino/80 hidden space-x-6 text-xl md:flex">
         {routes.map((e, i) => (
-          <Link
+          <motion.div
+            initial={{ x: 100, y: -20, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ delay: i * 0.7, duration: 1 }}
             key={i}
-            className="hover:text-cappuccino transition-all"
-            href={e.path}
           >
-            {e.name}
-          </Link>
+            <Link
+              className="hover:text-cappuccino transition-all"
+              href={e.path}
+            >
+              {e.name}
+            </Link>
+          </motion.div>
         ))}
       </nav>
       <nav ref={navRef} className="items-center justify-center md:hidden">
@@ -84,6 +95,6 @@ export default function Header() {
           )}
         </AnimatePresence>
       </nav>
-    </header>
+    </motion.header>
   );
 }

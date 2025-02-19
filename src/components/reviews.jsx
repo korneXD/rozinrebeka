@@ -2,43 +2,11 @@
 
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useState } from "react";
+import { motion, useInView } from "motion/react";
+import { reviews } from "@/lib/constants";
 
 export default function Reviews() {
-  const reviews = [
-    {
-      review:
-        "Köszönöm szépen Drága Rebim hogy ilyen jól rendbe hoztad az arcom. Imádom veled az összes együtt töltött percet, köszönöm hogy vagy nekem!!!",
-      author: "Bernadett Polyák",
-    },
-    {
-      review:
-        "Nagyon tetszik, ahogy Rebi szebbnél szebb tetoválásokat készít. Ajánlani tudom mindenkinek.",
-      author: "Éva Csizmadiáné",
-    },
-    {
-      review:
-        "Rebi arckezelése isteni. Jó termékekkel dolgozik és a szakmai hozzáértése sem elhanyagolható. Nyugodt szívvel ajánlom mindenkinek.",
-      author: "Borsos-Szabó Kitti",
-    },
-    {
-      review:
-        "Ismét fantasztikus kezelésben volt részem. Rebekánál az arcmasszázs olyan, mint egy csodálatosan megkomponált táncelőadás. Emellett pedig mindig ellát személyre szabott, hasznos tanácsokkal, amiért külön hálás vagyok.",
-      author: "Ágnes Mezeiné Losonczi",
-    },
-    {
-      review:
-        "Rebeka tökéletes kozmetikus és jó anyagokkal dolgozik precíz naprakész és fantasztikus munkájai vannak egy szóval a legjobb kezek közt szépülünk és mindig feldobja a napunkat.",
-      author: "Éva Szöllősiné Oláh",
-    },
-    {
-      review:
-        "Az elrontott tetoválásom javította Rebi. Mint emberileg, mint szakmailag nálam 5*! Bàtran ajánlom mindenkinek!",
-      author: "Alexandra Tóth",
-    },
-  ];
-
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
 
@@ -52,8 +20,16 @@ export default function Reviews() {
     setIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
   };
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <section className="relative container mx-auto h-full max-w-5xl px-0 py-8 md:px-4">
+    <motion.section
+      ref={ref}
+      animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="relative container mx-auto h-full max-w-5xl px-0 py-8 md:px-4"
+    >
       <div className="mx-auto max-w-3xl space-y-8 text-center">
         <h3 className="text-cappuccino font-serif text-3xl italic">
           Vélemények Rólam
@@ -110,6 +86,6 @@ export default function Reviews() {
           </button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,10 +1,11 @@
 "use client";
 
 import { Mail, MapPin, Phone } from "lucide-react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import React, { useState, useRef } from "react";
 import sendEmail from "@/emails/sendEmail";
 import Link from "next/link";
+import { toast } from "sonner";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -25,13 +26,20 @@ export default function Contact() {
       nameRef.current.value = "";
       emailRef.current.value = "";
       messageRef.current.value = "";
+      toast.success("Hamarosan válaszolok! :)");
     } catch (error) {
       console.error(error);
     }
   };
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <section
+    <motion.section
+      ref={ref}
+      animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
       className="bg-latte shadow-secondary-foreground container mx-auto my-12 w-full max-w-md scroll-mt-10 rounded-3xl px-4 py-16 shadow-sm md:max-w-4xl"
       id="contact"
     >
@@ -116,6 +124,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

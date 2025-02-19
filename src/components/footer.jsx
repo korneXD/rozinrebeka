@@ -1,14 +1,23 @@
 "use client";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { QRCode } from "react-qrcode-logo";
+import { motion, useInView } from "motion/react";
 
 export default function Footer() {
   const date = new Date();
   const year = date.getFullYear();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <footer className="bg-beige flex w-full py-12">
+    <motion.footer
+      ref={ref}
+      initial={{ y: 50, opacity: 0 }}
+      animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="bg-beige flex w-full py-12"
+    >
       <div className="container mx-auto flex flex-col items-center justify-center px-4">
         <div className="text-cappuccino/80 flex w-full flex-wrap items-start justify-around gap-8">
           <div className="flex w-full flex-col items-center justify-center gap-2 text-left md:w-1/3 md:items-start">
@@ -77,6 +86,6 @@ export default function Footer() {
           {year} - Rozin Rebeka
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

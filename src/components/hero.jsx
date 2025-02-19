@@ -1,15 +1,28 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="container mx-auto px-4 py-16 select-none md:py-24">
+    <motion.section
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.1, duration: 1.2 }}
+      className="container mx-auto px-4 py-16 select-none md:py-24"
+    >
       <div className="grid items-center gap-12 lg:grid-cols-5">
         <div className="space-y-6 lg:col-span-3">
           <h2 className="text-cappuccino font-serif text-5xl leading-tight md:text-6xl">
             Fókuszban a <span className="font-serif italic">Bőröd.</span>
           </h2>
+          <button
+            className="text-black"
+          >
+            toast
+          </button>
           <p className="text-cappuccino/80 text-lg">
             Luxus bőrápolási kezelések, amelyek kiemelik egyedi szépséged!
           </p>
@@ -41,6 +54,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

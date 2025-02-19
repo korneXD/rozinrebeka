@@ -212,3 +212,36 @@ export const arlista = [
     price: "8.000ft",
   },
 ];
+
+export const reviews = [
+  {
+    review:
+      "Köszönöm szépen Drága Rebim hogy ilyen jól rendbe hoztad az arcom. Imádom veled az összes együtt töltött percet, köszönöm hogy vagy nekem!!!",
+    author: "Bernadett Polyák",
+  },
+  {
+    review:
+      "Nagyon tetszik, ahogy Rebi szebbnél szebb tetoválásokat készít. Ajánlani tudom mindenkinek.",
+    author: "Éva Csizmadiáné",
+  },
+  {
+    review:
+      "Rebi arckezelése isteni. Jó termékekkel dolgozik és a szakmai hozzáértése sem elhanyagolható. Nyugodt szívvel ajánlom mindenkinek.",
+    author: "Borsos-Szabó Kitti",
+  },
+  {
+    review:
+      "Ismét fantasztikus kezelésben volt részem. Rebekánál az arcmasszázs olyan, mint egy csodálatosan megkomponált táncelőadás. Emellett pedig mindig ellát személyre szabott, hasznos tanácsokkal, amiért külön hálás vagyok.",
+    author: "Ágnes Mezeiné Losonczi",
+  },
+  {
+    review:
+      "Rebeka tökéletes kozmetikus és jó anyagokkal dolgozik precíz naprakész és fantasztikus munkájai vannak egy szóval a legjobb kezek közt szépülünk és mindig feldobja a napunkat.",
+    author: "Éva Szöllősiné Oláh",
+  },
+  {
+    review:
+      "Az elrontott tetoválásom javította Rebi. Mint emberileg, mint szakmailag nálam 5*! Bàtran ajánlom mindenkinek!",
+    author: "Alexandra Tóth",
+  },
+];

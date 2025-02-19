@@ -1,11 +1,17 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import { motion, useInView } from "framer-motion";
 
 export default function Services() {
   return (
-    <section
+    <motion.section
+      initial={{ x: 100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ delay: 0.1, duration: 1 }}
       id="services"
       className="bg-latte shadow-secondary-foreground container mx-auto my-12 flex w-full max-w-md scroll-mt-10 flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-xs select-none md:max-w-4xl"
     >
@@ -71,6 +77,6 @@ export default function Services() {
         <p>Árlista megtekintése</p>
         <ExternalLink className="text-cappuccino size-5 font-serif" />
       </Link>
-    </section>
+    </motion.section>
   );
 }

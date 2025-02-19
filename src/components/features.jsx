@@ -1,12 +1,20 @@
 "use client";
 import { Sparkles } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { QRCode } from "react-qrcode-logo";
+import { motion, useInView } from "motion/react";
 
 export default function Features() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <section className="bg-latte shadow-secondary-foreground relative mx-auto my-12 flex w-fit max-w-2xl flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-sm select-none md:w-full md:flex-row">
+    <motion.section
+      ref={ref}
+      animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="bg-latte shadow-secondary-foreground relative mx-auto my-12 flex w-fit max-w-2xl flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-sm select-none md:w-full md:flex-row"
+    >
       <div className="relative flex w-full items-center justify-center md:w-2/3">
         <Sparkles className="text-cream absolute -top-3 -left-3 size-12 rotate-20" />
         <Sparkles className="text-cream absolute -right-3 -bottom-3 size-12 -rotate-20 md:right-12" />
@@ -40,6 +48,6 @@ export default function Features() {
           bgColor="#e6dccd"
         />
       </div>
-    </section>
+    </motion.section>
   );
 }
