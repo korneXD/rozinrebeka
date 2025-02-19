@@ -18,11 +18,6 @@ export default function Hero() {
           <h2 className="text-cappuccino font-serif text-5xl leading-tight md:text-6xl">
             Fókuszban a <span className="font-serif italic">Bőröd.</span>
           </h2>
-          <button
-            className="text-black"
-          >
-            toast
-          </button>
           <p className="text-cappuccino/80 text-lg">
             Luxus bőrápolási kezelések, amelyek kiemelik egyedi szépséged!
           </p>
