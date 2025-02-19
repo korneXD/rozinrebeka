@@ -52,7 +52,7 @@ export default function Reviews() {
             <Star key={i} className="h-5 w-5 fill-current" />
           ))}
         </div>
-        <div className="relative flex min-h-[170px] items-center justify-center">
+        <div className="relative flex min-h-[350px] items-center justify-center md:min-h-[170px]">
           <button
             aria-label="leftArrow"
             onClick={handlePrev}

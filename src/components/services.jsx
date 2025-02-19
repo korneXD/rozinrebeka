@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { arlistaUrl } from "@/lib/constants";
+import { arlistaUrl, services } from "@/lib/constants";
 
 export default function Services() {
   return (
@@ -26,23 +26,7 @@ export default function Services() {
       </div>
 
       <div className="grid gap-4 text-center md:grid-cols-3">
-        {[
-          {
-            name: "Tisztító arckezelések",
-            price: "14.500 Ft-tól",
-            src: "arc.webp",
-          },
-          {
-            name: "Sminktetoválás",
-            price: "30.000 Ft-tól",
-            src: "tetko.webp",
-          },
-          {
-            name: "Smink",
-            price: "8.000 Ft-tól",
-            src: "smink.webp",
-          },
-        ].map((service, i) => (
+        {services.map((service, i) => (
           <div
             key={i}
             className="group flex cursor-pointer flex-col items-center justify-around"
@@ -52,9 +36,9 @@ export default function Services() {
                 <Image
                   src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//${service.src}`}
                   className="h-full w-full object-cover"
-                  height={200}
-                  width={200}
+                  fill
                   draggable={false}
+                  quality={75}
                   loading="lazy"
                   alt={service.name}
                 />

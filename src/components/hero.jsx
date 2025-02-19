@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "motion/react";
+import { Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -15,9 +16,12 @@ export default function Hero() {
     >
       <div className="grid items-center gap-12 lg:grid-cols-5">
         <div className="space-y-6 lg:col-span-3">
-          <h1 className="text-cappuccino font-serif text-5xl leading-tight md:text-6xl">
-            Fókuszban a <span className="italic">Bőröd</span>.
-          </h1>
+          <div className="relative flex items-center justify-start">
+            <Sparkles className="text-latte-dark absolute -top-3 -left-5 size-8 rotate-35" />
+            <h1 className="text-cappuccino z-10 font-serif text-5xl leading-tight md:text-6xl">
+              Fókuszban a <span className="italic">Bőröd</span>.
+            </h1>
+          </div>
           <p className="text-cappuccino/80 text-lg">
             Luxus bőrápolási kezelések, amelyek kiemelik egyedi szépséged!
           </p>
@@ -35,8 +39,7 @@ export default function Hero() {
               <Image
                 src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//hero.webp`}
                 className="h-full w-full object-cover"
-                height={200}
-                width={200}
+                fill
                 priority
                 quality={75}
                 draggable={false}

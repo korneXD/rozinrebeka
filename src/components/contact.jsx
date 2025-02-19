@@ -47,12 +47,10 @@ export default function Contact() {
     >
       <div className="grid items-start justify-center gap-12 md:grid-cols-2">
         <div className="flex flex-col items-center justify-center space-y-6">
-          <h3 className="text-cappuccino font-serif text-4xl">
+          <h3 className="text-cappuccino text-center font-serif text-4xl">
             Lépj kapcsolatba <span className="font-serif italic">Velem!</span>
           </h3>
-          <p className="text-cappuccino/80">
-            Várom üzeneted! Írj itt, vagy használd elérhetőségeimet.
-          </p>
+
           <form
             onSubmit={handleSubmit}
             className="flex w-full flex-col items-start space-y-4 md:w-[60%]"
@@ -93,6 +91,14 @@ export default function Contact() {
               Küldd el nekem!
             </button>
           </form>
+          <p className="text-cappuccino flex text-center font-serif text-lg md:hidden">
+            - Időpontfoglalás előtt kérlek, vedd fel velem a kapcsolatot! Küldd
+            el a nevedet, az e-mail címedet és az üzenetedet, és amint tudok,
+            válaszolok. -
+          </p>
+        </div>
+        <div className="flex w-full items-center justify-center md:hidden">
+          <hr className="border-cappuccino-light w-60 rounded-md border-1" />
         </div>
         <div className="flex flex-col items-center justify-center space-y-6">
           <h3 className="text-cappuccino font-serif text-4xl">
@@ -104,26 +110,31 @@ export default function Contact() {
             <Link
               target="_blank"
               href={maps}
-              className="text-cappuccino flex w-full items-center space-x-3"
+              className="text-cappuccino flex w-full items-center space-x-3 font-serif text-lg"
             >
               <MapPin className="h-5 w-5" />
               <p>Izsák Arany János utca 2</p>
             </Link>
             <Link
               href={tel}
-              className="text-cappuccino flex w-full items-center space-x-3"
+              className="text-cappuccino flex w-full items-center space-x-3 font-serif text-lg"
             >
               <Phone className="h-5 w-5" />
               <p>+36 20 217 0977</p>
             </Link>
             <Link
               href={email}
-              className="text-cappuccino flex w-full items-center space-x-3"
+              className="text-cappuccino flex w-full items-center space-x-3 font-serif text-lg"
             >
               <Mail className="h-5 w-5" />
               <p>rebeka.kozmetikus88@gmail.com</p>
             </Link>
           </div>
+          <p className="text-cappuccino mt-12 hidden text-center font-serif text-lg italic md:flex">
+            - Időpontfoglalás előtt kérlek, vedd fel velem a kapcsolatot! Küldd
+            el a nevedet, az e-mail címedet és az üzenetedet, és amint tudok,
+            válaszolok. -
+          </p>
         </div>
       </div>
     </motion.section>

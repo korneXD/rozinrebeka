@@ -55,15 +55,15 @@ export default function ImageSlider() {
       <div className="relative flex w-full max-w-lg flex-row items-center justify-center">
         <div className="relative flex w-full items-center justify-center">
           {images.length > 0 && images[currentIndex] ? (
-            <div className="relative flex items-center justify-center">
+            <div className="relative flex aspect-[3/2] h-48 max-w-lg items-center justify-center md:h-72">
               <Image
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex}`}
-                width={200}
-                height={200}
+                fill
                 draggable={false}
+                quality={75}
                 loading="lazy"
-                className="border-beige shadow-latte-dark z-10 aspect-[3/2] h-48 w-lg rounded-xl border-2 object-contain shadow-xs md:h-72"
+                className="border-beige shadow-latte-dark z-10 w-full rounded-xl border-2 object-contain shadow-xs"
               />
               <Image
                 src={images[currentIndex]}
@@ -71,8 +71,9 @@ export default function ImageSlider() {
                 width={100}
                 height={100}
                 draggable={false}
+                quality={1}
                 loading="lazy"
-                className="absolute aspect-[3/2] h-48 w-full rounded-xl object-cover p-0 blur-md md:h-72"
+                className="absolute aspect-[3/2] h-48 w-full rounded-xl object-cover p-0 blur-md md:h-72 md:w-lg"
               />
             </div>
           ) : (
@@ -111,6 +112,7 @@ export default function ImageSlider() {
                 width={200}
                 height={200}
                 draggable={false}
+                quality={10}
                 loading="lazy"
                 className={clsx(
                   "shadow-latte-dark border-beige size-24 cursor-pointer overflow-hidden rounded-md border-2 object-cover shadow-md",
@@ -126,6 +128,10 @@ export default function ImageSlider() {
           </button>
         ))}
       </div>
+      <p className="text-cappuccino mt-6 text-center font-serif text-lg md:text-xl">
+        Itt megtekintheted néhány korábbi munkám fotóit. A galéria folyamatosan
+        frissül majd új képekkel, érdemes később is visszanézni!
+      </p>
     </motion.section>
   );
 }

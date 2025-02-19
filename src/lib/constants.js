@@ -22,6 +22,24 @@ export const facebook =
 
 export const tiktok = "https://www.tiktok.com/@rebekarozinkozmetikus";
 
+export const services = [
+  {
+    name: "Tisztító arckezelések",
+    price: "14.500 Ft-tól",
+    src: "arc.webp",
+  },
+  {
+    name: "Sminktetoválás",
+    price: "30.000 Ft-tól",
+    src: "tetko.webp",
+  },
+  {
+    name: "Smink",
+    price: "8.000 Ft-tól",
+    src: "smink.webp",
+  },
+];
+
 export const arlista = [
   {
     title: "Arckezelések",
@@ -262,5 +280,34 @@ export const reviews = [
     review:
       "Az elrontott tetoválásom javította Rebi. Mint emberileg, mint szakmailag nálam 5*! Bàtran ajánlom mindenkinek!",
     author: "Alexandra Tóth",
+  },
+  {
+    review:
+      "Szuper arckezelések,csodaszép sminktetoválások. És természetesen jó hangulat,szuper jó tanácsok, kell ennel több? Keressétek bátran, a legjobb kezekben lesztek.",
+    author: "Elvira Horváth",
+  },
+  {
+    review:
+      "Rebi gyönyörű szemöldöktetoválást készített nekem. Nagyon precízen és személyre szabottan dolgozik. Úgy érzem a legjobb szakembert választottam, mindenkinek csak ajánlani tudom.",
+    author: "Bránya Nikolett",
+  },
+  {
+    review:
+      "Csak ajánlani tudom Rebit. Munkája kifogástalan, a jókedv pedig garantált nála",
+    author: "Timea Dani",
+  },
+  {
+    review:
+      "Profi arckezelést kaptam, Rebinek köszönhetően sok információhoz hozzájutottam a bőrömmel kapcsolatban",
+    author: "Tarnóczi-Nyárfás Boglárka",
+  },
+  {
+    review:
+      "Nagyon szeretem a kezeléseket Rebinél! Mindig figyelmes, kedves, és a bőröm sokkal szebb, amióta hozzá járok. Profi kezekben érzem magam, és mindig kellemes légkörben telik a kezelés. Mindenkinek csak ajánlani tudom!",
+    author: "Kíra Kelemen",
+  },
+  {
+    review: "Kedves,ügyes, precíz...bátran ajánlom",
+    author: "Fekete Marcsi",
   },
 ];
