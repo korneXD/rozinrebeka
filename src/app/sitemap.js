@@ -16,8 +16,9 @@ export default async function sitemap() {
       const lastModified = await getLastModifiedDate(
         `src/app/${pageRoute}/page.jsx`,
       );
+      const page = pageRoute.replace(/\/?\(.*?\)/g, "").replace(/^\/+/, "");
       return {
-        url: `${BASE_URL}`,
+        url: `${BASE_URL}/${page}`,
         lastModified,
       };
     }),
