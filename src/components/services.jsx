@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { motion, useInView } from "framer-motion";
+import { arlistaUrl } from "@/lib/constants";
 
 export default function Services() {
   return (
@@ -20,8 +21,7 @@ export default function Services() {
           Szolgáltatásaim
         </h3>
         <p className="text-cappuccino/80 max-w-92 text-center text-lg md:w-full">
-          Élvezd a prémium szépségkezeléseimet, amelyeket kizárólag neked
-          nyújtok!
+          Élvezd a prémium szépségkezeléseimet, fókuszban a bőröddel!
         </p>
       </div>
 
@@ -71,7 +71,7 @@ export default function Services() {
         És még sok más!
       </p>
       <Link
-        href={"/arlista"}
+        href={arlistaUrl}
         className="text-cappuccino flex items-center justify-center gap-2 font-serif text-lg underline"
       >
         <p>Árlista megtekintése</p>

@@ -88,7 +88,7 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark text-md mx-auto w-fit cursor-pointer rounded-full px-4 py-2 font-sans font-bold shadow-md"
+              className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark text-md mx-auto w-fit cursor-pointer rounded-full px-4 py-2 font-sans font-bold shadow-md transition-all"
             >
               Küldd el nekem!
             </button>

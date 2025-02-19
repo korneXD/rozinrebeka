@@ -23,7 +23,7 @@ export default function Hero() {
           </p>
           <Link
             href={"#contact"}
-            className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark rounded-full px-8 py-2 font-sans font-bold shadow-md"
+            className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark rounded-full px-8 py-2 font-sans font-bold shadow-md transition-all"
           >
             Időpontfoglalás
           </Link>

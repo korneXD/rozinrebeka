@@ -12,6 +12,16 @@ export const email = "mailto:rebeka.kozmetikus88@gmail.com";
 
 export const termek = "https://rozinrebeka.wellu.eu/register.html?__country=HU";
 
+export const arlistaUrl = "/arlista";
+
+export const instagram =
+  "https://www.instagram.com/rozinrebeka_kozmetikus.sminkes/";
+
+export const facebook =
+  "https://www.facebook.com/profile.php?id=100078785988475&locale=hu_HU";
+
+export const tiktok = "https://www.tiktok.com/@rebekarozinkozmetikus";
+
 export const arlista = [
   {
     title: "Arckezelések",
