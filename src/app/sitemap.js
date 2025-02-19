@@ -1,8 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-
 async function getLastModifiedDate(filePath) {
   filePath = path.join(process.cwd(), filePath);
   const stats = await fs.promises.stat(filePath);
@@ -17,7 +15,7 @@ export default async function sitemap() {
         `src/app/${pageRoute}/page.jsx`,
       );
       return {
-        url: `${BASE_URL}`,
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
         lastModified,
       };
     }),
