@@ -54,6 +54,8 @@ export default function RootLayout({ children }) {
             classNames: {
               success:
                 "flex w-full border font-serif border-cappuccino justify-start px-4 items-center text-xl text-black gap-2 bg-beige rounded-xl py-4",
+              error:
+                "flex w-full border font-serif border-cappuccino justify-start px-4 items-center text-xl text-black gap-2 bg-beige rounded-xl py-4",
             },
           }}
         />

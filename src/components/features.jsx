@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useRef } from "react";
 import { QRCode } from "react-qrcode-logo";
 import { motion, useInView } from "motion/react";
+import { termek } from "@/lib/constants";
 
 export default function Features() {
   const ref = useRef(null);
@@ -30,7 +31,7 @@ export default function Features() {
           Használd a linkem,
         </h4>
         <Link
-          href={"https://rozinrebeka.wellu.eu/register.html?__country=HU"}
+          href={termek}
           target="_blank"
           className="bg-cappuccino text-cream hover:bg-cappuccino-light shadow-latte-dark my-4 rounded-full px-8 py-2 font-sans font-bold tracking-wide shadow-md"
         >
@@ -40,7 +41,7 @@ export default function Features() {
           vagy olvasd be a QR kódot!
         </p>
         <QRCode
-          value="https://rozinrebeka.wellu.eu/register.html?__country=HU"
+          value={termek}
           qrStyle="square"
           eyeRadius={15}
           eyeColor="#4a3728"
