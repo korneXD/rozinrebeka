@@ -1,6 +1,7 @@
 export const title = "Rozin Rebeka";
 
-export const description = "Rozin Rebeka kozmetikus";
+export const description =
+  "“Az arcápolás egyfajta befektetés,ami évek múlva fog megtérülni,és a lelkedre is jól hat!";
 
 export const arlista = [
   {
