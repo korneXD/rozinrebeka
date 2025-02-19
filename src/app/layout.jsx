@@ -4,7 +4,10 @@ import React from "react";
 import { Toaster } from "sonner";
 
 export const metadata = {
-  title,
+  title: {
+    default: title,
+    template: `%s | ${title}`,
+  },
   description,
   keywords: [
     "Kozmetikus",
@@ -39,9 +42,16 @@ export const metadata = {
     description,
     images: ["/opengraph-image.png"],
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: [
+    {
+      rel: "icon",
+      url: "/favicon.ico",
+    },
+    {
+      rel: "apple-touch-icon",
+      url: "/favicon.ico",
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
