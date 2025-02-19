@@ -4,6 +4,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import React, { useState, useRef } from "react";
 import sendEmail from "@/emails/sendEmail";
+import Link from "next/link";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -90,18 +91,28 @@ export default function Contact() {
           </h3>
           <p className="text-cappuccino/80">Időpontfoglalás után itt várlak:</p>
           <div className="flex w-fit flex-col items-center justify-center space-y-4 text-left">
-            <div className="text-cappuccino flex w-full items-center space-x-3">
+            <Link
+              target="_blank"
+              href="https://www.google.hu/maps/place/Rozin+Rebeka+Kozmetikus+%C3%A9s+Sminkes/@46.7992841,19.3585035,573m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4743cb0030eb7497:0x468a5ab2d0d5dd99!8m2!3d46.7992841!4d19.3610784!16s%2Fg%2F11x0ggf46q?entry=ttu&g_ep=EgoyMDI1MDIxNy4wIKXMDSoASAFQAw%3D%3D"
+              className="text-cappuccino flex w-full items-center space-x-3"
+            >
               <MapPin className="h-5 w-5" />
               <p>Izsák Arany János utca 2</p>
-            </div>
-            <div className="text-cappuccino flex w-full items-center space-x-3">
+            </Link>
+            <Link
+              href="tel:+36 20 217 0977"
+              className="text-cappuccino flex w-full items-center space-x-3"
+            >
               <Phone className="h-5 w-5" />
               <p>+36 20 217 0977</p>
-            </div>
-            <div className="text-cappuccino flex w-full items-center space-x-3">
+            </Link>
+            <Link
+              href="rebeka.kozmetikus88@gmail.com"
+              className="text-cappuccino flex w-full items-center space-x-3"
+            >
               <Mail className="h-5 w-5" />
               <p>rebeka.kozmetikus88@gmail.com</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
