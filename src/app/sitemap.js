@@ -10,15 +10,14 @@ async function getLastModifiedDate(filePath) {
 }
 
 export default async function sitemap() {
-  const pageRoutes = ["", "arlista"];
+  const pageRoutes = [""];
   const staticRoutes = await Promise.all(
     pageRoutes.map(async (pageRoute) => {
       const lastModified = await getLastModifiedDate(
         `src/app/${pageRoute}/page.jsx`,
       );
-      const page = pageRoute.replace(/\/?\(.*?\)/g, "").replace(/^\/+/, "");
       return {
-        url: `${BASE_URL}/${page}`,
+        url: `${BASE_URL}`,
         lastModified,
       };
     }),
