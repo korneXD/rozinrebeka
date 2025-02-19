@@ -37,7 +37,7 @@ export default function Header() {
       transition={{ delay: 0.1, duration: 0.8 }}
       className="container mx-auto flex items-center justify-between px-4 py-6"
     >
-      <h1 className="text-cappuccino font-serif text-3xl">Rozin Rebeka</h1>
+      <h2 className="text-cappuccino font-serif text-3xl">Rozin Rebeka</h2>
       <nav className="text-cappuccino/80 hidden space-x-6 text-xl md:flex">
         {routes.map((e, i) => (
           <motion.div

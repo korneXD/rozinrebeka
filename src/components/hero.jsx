@@ -15,9 +15,9 @@ export default function Hero() {
     >
       <div className="grid items-center gap-12 lg:grid-cols-5">
         <div className="space-y-6 lg:col-span-3">
-          <h2 className="text-cappuccino font-serif text-5xl leading-tight md:text-6xl">
-            Fókuszban a <span className="font-serif italic">Bőröd.</span>
-          </h2>
+          <h1 className="text-cappuccino font-serif text-5xl leading-tight md:text-6xl">
+            Fókuszban a <span className="italic">Bőröd</span>.
+          </h1>
           <p className="text-cappuccino/80 text-lg">
             Luxus bőrápolási kezelések, amelyek kiemelik egyedi szépséged!
           </p>
@@ -40,7 +40,7 @@ export default function Hero() {
                 priority
                 quality={75}
                 draggable={false}
-                alt="Hero"
+                alt="Bőrápolás képe"
               />
             </div>
             <div className="bg-cappuccino shadow-latte-dark absolute -right-4 -bottom-4 flex size-20 items-center justify-center rounded-full shadow-xs md:size-24">

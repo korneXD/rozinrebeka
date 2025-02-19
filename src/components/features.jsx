@@ -26,9 +26,9 @@ export default function Features() {
         </p>
       </div>
       <div className="flex w-full flex-col items-center justify-center md:w-1/3">
-        <h1 className="text-cappuccino mt-10 text-center font-serif text-xl md:mt-0">
+        <h4 className="text-cappuccino mt-10 text-center font-serif text-xl md:mt-0">
           Használd a linkem,
-        </h1>
+        </h4>
         <Link
           href={"https://rozinrebeka.wellu.eu/register.html?__country=HU"}
           target="_blank"
