@@ -44,15 +44,15 @@ export default function Contact() {
           <div className="flex w-fit flex-col items-center justify-center space-y-4 text-left">
             <div className="text-cappuccino flex w-full items-center space-x-3">
               <MapPin className="h-5 w-5" />
-              <span>Izsák, Hungary</span>
+              <p>Izsák Arany János utca 2</p>
             </div>
             <div className="text-cappuccino flex w-full items-center space-x-3">
               <Phone className="h-5 w-5" />
-              <span>+36 70 234 5678</span>
+              <p>+36 20 217 0977</p>
             </div>
             <div className="text-cappuccino flex w-full items-center space-x-3">
               <Mail className="h-5 w-5" />
-              <span>contact@rebeka.hu</span>
+              <p>rebeka.kozmetikus88@gmail.com</p>
             </div>
           </div>
         </div>
