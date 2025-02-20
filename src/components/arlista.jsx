@@ -34,7 +34,7 @@ export default function Arlista() {
         <div className="text-gold relative z-10 mb-30 flex flex-col items-center justify-center gap-2 px-4 py-10 font-serif italic">
           <h1 className="text-4xl">Árlista</h1>
           <Link
-            href={"/"}
+            href={"https://www.rozinrebeka.hu/"}
             className="w-full text-right text-xl underline md:text-left"
           >
             Vissza a főoldalra

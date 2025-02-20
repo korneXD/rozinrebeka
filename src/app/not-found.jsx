@@ -8,7 +8,10 @@ export default function NotFound() {
       <h3 className="text-2xl italic">
         A felkeresett oldal nem található :{"("}
       </h3>
-      <Link href={"/"} className="text-xl italic underline">
+      <Link
+        href={"https://www.rozinrebeka.hu/"}
+        className="text-xl italic underline"
+      >
         Vissza a Főoldalra
       </Link>
     </section>

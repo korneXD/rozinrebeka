@@ -59,7 +59,7 @@ export default function Services() {
         És még sok más!
       </p>
       <Link
-        href={arlistaUrl}
+        href={"https://www.rozinrebeka.hu/arlista"}
         className="text-cappuccino flex items-center justify-center gap-2 font-serif text-lg underline"
       >
         <p>Árlista megtekintése</p>
