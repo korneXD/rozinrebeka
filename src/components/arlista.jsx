@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 
-export default function Arlista() {
+export default function Arlista({ jsonLd }) {
   return (
     <section className="bg-cream flex min-h-screen w-full items-start justify-center">
       <motion.div
@@ -75,6 +75,10 @@ export default function Arlista() {
           className="object-fit absolute right-0 bottom-0 h-42 w-fit md:h-60"
         />
       </motion.div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </section>
   );
 }

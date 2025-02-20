@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "motion/react";
-import { Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -12,7 +11,7 @@ export default function Hero() {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.1, duration: 1.2 }}
-      className="container mx-auto px-4 py-16 select-none md:py-24"
+      className="container mx-auto mt-20 px-4 py-16 select-none md:py-24"
     >
       <div className="grid items-center gap-12 lg:grid-cols-5">
         <div className="space-y-6 lg:col-span-3">

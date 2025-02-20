@@ -10,7 +10,7 @@ async function getLastModifiedDate(filePath) {
 }
 
 export default async function sitemap() {
-  const pageRoutes = ["", "arlista"];
+  const pageRoutes = ["", "arlista", "rolam", "galeria"];
   const staticRoutes = await Promise.all(
     pageRoutes.map(async (pageRoute) => {
       const lastModified = await getLastModifiedDate(

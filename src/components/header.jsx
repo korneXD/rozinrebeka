@@ -9,8 +9,10 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   const routes = [
+    { name: "Rólam", path: "/rolam" },
     { name: "Szolgáltatásaim", path: "#services" },
     { name: "Árlista", path: "/arlista" },
+    { name: "Galéria", path: "/galeria" },
     { name: "Elérhetőség", path: "#contact" },
   ];
 
@@ -35,66 +37,74 @@ export default function Header() {
       initial={{ y: "-100%", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.1, duration: 0.8 }}
-      className="container mx-auto flex items-center justify-between px-4 py-6"
+      className="absolute top-0 left-0 mx-auto flex w-full items-center justify-between px-4 py-6"
     >
-      <h2 className="text-cappuccino font-serif text-3xl">Rozin Rebeka</h2>
-      <nav className="text-cappuccino/80 hidden space-x-6 text-xl md:flex">
-        {routes.map((e, i) => (
-          <motion.div
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: i * 0.7, duration: 1 }}
-            key={i}
-          >
-            <Link
-              className="hover:text-cappuccino transition-all"
-              href={e.path}
-            >
-              {e.name}
-            </Link>
-          </motion.div>
-        ))}
-      </nav>
-      <nav ref={navRef} className="items-center justify-center md:hidden">
-        <button
-          className="text-cappuccino hover:text-cappuccino-light cursor-pointer"
-          onClick={() => setOpen(!open)}
-        >
-          <AlignJustify className="size-6" />
-        </button>
-        <AnimatePresence>
-          {open && (
+      <div className="mx-auto flex w-full max-w-4xl items-center justify-center">
+        <div className="flex w-full text-left">
+          <Link href={"https://www.rozinrebeka.hu"}>
+            <h2 className="text-cappuccino font-serif text-3xl">
+              Rozin Rebeka
+            </h2>
+          </Link>
+        </div>
+        <nav className="text-cappuccino/80 hidden space-x-6 text-xl md:flex">
+          {routes.map((e, i) => (
             <motion.div
-              initial={{ opacity: 1, y: "-100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 1, y: "-100%" }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="bg-beige shadow-secondary-foreground absolute top-0 left-0 z-10 flex w-full flex-col items-center justify-center px-2 py-2 shadow-sm"
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: i * 0.5, duration: 1 }}
+              key={i}
             >
-              <div className="relative w-full">
-                <button
-                  className="absolute top-4 right-2 transition-all hover:scale-105"
-                  onClick={() => setOpen(false)}
-                >
-                  <CircleX className="text-cappuccino bg-latte-dark size-8 rounded-full" />
-                </button>
-              </div>
-              <div className="flex flex-col items-center justify-center pt-4">
-                {routes.map((e, i) => (
-                  <Link
-                    href={e.path}
-                    key={i}
-                    className="hover:text-cappuccino text-cappuccino py-1 font-serif text-2xl transition-all"
+              <Link
+                className="hover:text-cappuccino transition-all"
+                href={e.path}
+              >
+                {e.name}
+              </Link>
+            </motion.div>
+          ))}
+        </nav>
+        <nav ref={navRef} className="items-center justify-center md:hidden">
+          <button
+            className="text-cappuccino hover:text-cappuccino-light cursor-pointer"
+            onClick={() => setOpen(!open)}
+          >
+            <AlignJustify className="size-6" />
+          </button>
+          <AnimatePresence>
+            {open && (
+              <motion.div
+                initial={{ opacity: 1, y: "-100%" }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 1, y: "-100%" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="bg-beige shadow-secondary-foreground absolute top-0 left-0 z-10 flex w-full flex-col items-center justify-center px-2 py-2 shadow-sm"
+              >
+                <div className="relative w-full">
+                  <button
+                    className="absolute top-4 right-2 transition-all hover:scale-105"
                     onClick={() => setOpen(false)}
                   >
-                    {e.name}
-                  </Link>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
+                    <CircleX className="text-cappuccino bg-latte-dark size-8 rounded-full" />
+                  </button>
+                </div>
+                <div className="flex flex-col items-center justify-center pt-4">
+                  {routes.map((e, i) => (
+                    <Link
+                      href={e.path}
+                      key={i}
+                      className="hover:text-cappuccino text-cappuccino py-1 font-serif text-2xl transition-all"
+                      onClick={() => setOpen(false)}
+                    >
+                      {e.name}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </nav>
+      </div>
     </motion.header>
   );
 }

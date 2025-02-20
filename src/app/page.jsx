@@ -14,6 +14,14 @@ export const metadata = {
   description: description,
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Page",
+  name: title,
+  image: "/opengraph-image.png",
+  description: description,
+};
+
 export default function Home() {
   return (
     <div className="bg-cream flex min-h-screen flex-col items-center justify-center">
@@ -27,6 +35,10 @@ export default function Home() {
         <Contact />
       </div>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 }
