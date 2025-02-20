@@ -17,7 +17,7 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Page",
-  name: title,
+  name: "Főoldal",
   image: "/opengraph-image.png",
   description: description,
 };
