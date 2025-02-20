@@ -56,6 +56,10 @@ export const metadata = {
       url: "/favicon.ico",
     },
   ],
+  viewport: {
+    width: "device-width",
+    initialScale: 1.0,
+  },
 };
 
 export default function RootLayout({ children }) {
