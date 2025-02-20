@@ -1,6 +1,6 @@
 import { supabase } from "@/lib/supabase";
 
-export const revalidate = 86400;
+export const revalidate = 2592000;
 
 export const config = {
   runtime: "edge",

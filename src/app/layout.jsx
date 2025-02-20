@@ -63,6 +63,14 @@ export const viewport = {
   initialScale: 1,
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Page",
+  name: title,
+  image: "/opengraph-image.png",
+  description: description,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="hu" className="scroll-smooth">
@@ -79,6 +87,10 @@ export default function RootLayout({ children }) {
           }}
         />
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );
