@@ -7,6 +7,12 @@ import ImageSlider from "@/components/images";
 import Reviews from "@/components/reviews";
 import Services from "@/components/services";
 import Features from "@/components/features";
+import { description } from "@/lib/constants";
+
+export const metadata = {
+  title: "Főoldal",
+  description: description,
+};
 
 export default function Home() {
   return (

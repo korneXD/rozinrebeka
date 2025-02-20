@@ -1,7 +1,7 @@
 export const title = "Rozin Rebeka";
 
 export const description =
-  "“Az arcápolás egyfajta befektetés,ami évek múlva fog megtérülni,és a lelkedre is jól hat!";
+  "“Az arcápolás egyfajta befektetés,ami évek múlva fog megtérülni,és a lelkedre is jól hat!“";
 
 export const maps =
   "https://www.google.hu/maps/place/Rozin+Rebeka+Kozmetikus+%C3%A9s+Sminkes/@46.7992841,19.3585035,573m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4743cb0030eb7497:0x468a5ab2d0d5dd99!8m2!3d46.7992841!4d19.3610784!16s%2Fg%2F11x0ggf46q?entry=ttu&g_ep=EgoyMDI1MDIxNy4wIKXMDSoASAFQAw%3D%3D";

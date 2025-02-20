@@ -4,6 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 
+export const metadata = {
+  title: "Árlista",
+  description:
+    "“Árlista - Szépségápolási kezelések, arckezelések, smink, gyantázás és más szolgáltatások árai. Tekintsd meg szolgáltatásaimat!“",
+};
+
 export default function Arlista() {
   return (
     <section className="bg-cream flex min-h-screen w-full items-start justify-center">
