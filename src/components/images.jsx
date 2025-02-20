@@ -60,6 +60,7 @@ export default function ImageSlider() {
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex}`}
                 fill
+                sizes="200x200"
                 draggable={false}
                 quality={75}
                 loading="lazy"

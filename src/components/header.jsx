@@ -68,7 +68,7 @@ export default function Header() {
               initial={{ opacity: 1, y: "-100%" }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 1, y: "-100%" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               className="bg-beige shadow-secondary-foreground absolute top-0 left-0 z-10 flex w-full flex-col items-center justify-center px-2 py-2 shadow-sm"
             >
               <div className="relative w-full">

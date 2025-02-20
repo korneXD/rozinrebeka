@@ -41,6 +41,7 @@ export default function Services() {
                   src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//${service.src}`}
                   className="h-full w-full object-cover"
                   fill
+                  sizes="200x200"
                   draggable={false}
                   quality={75}
                   loading="lazy"

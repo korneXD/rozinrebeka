@@ -37,6 +37,7 @@ export default function Hero() {
                 src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//hero.webp`}
                 className="h-full w-full object-cover"
                 fill
+                sizes="200x200"
                 priority
                 quality={75}
                 draggable={false}
