@@ -26,7 +26,7 @@ export default function Reviews() {
   return (
     <motion.section
       ref={ref}
-      animate={isInView ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
+      animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
       className="relative container mx-auto h-full max-w-5xl px-0 py-8 md:px-4"
     >

@@ -8,11 +8,15 @@ import { motion, useInView } from "framer-motion";
 import { arlistaUrl, services } from "@/lib/constants";
 
 export default function Services() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <motion.section
-      initial={{ y: 100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.1, duration: 1 }}
+      ref={ref}
+      initial={{ opacity: 0, y: 100 }}
+      animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
       id="services"
       className="bg-latte shadow-secondary-foreground container mx-auto my-12 flex w-full max-w-md scroll-mt-10 flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-xs select-none md:max-w-4xl"
     >

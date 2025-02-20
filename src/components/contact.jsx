@@ -82,7 +82,7 @@ export default function Contact() {
               }
               placeholder="Üzeneted nekem"
               className="bg-cream border-cappuccino/20 text-cappuccino w-full resize-none rounded-lg border px-2 py-1 outline-hidden"
-              rows={4}
+              rows={6}
             />
             <button
               type="submit"
