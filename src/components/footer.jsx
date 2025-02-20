@@ -3,7 +3,8 @@ import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import Link from "next/link";
-import { facebook, instagram, tiktok } from "@/lib/constants";
+import { facebook, instagram, maps, tiktok } from "@/lib/constants";
+import { MapPin } from "lucide-react";
 
 export default function Footer() {
   const date = new Date();
