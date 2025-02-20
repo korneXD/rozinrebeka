@@ -10,7 +10,7 @@ import Features from "@/components/features";
 import { description } from "@/lib/constants";
 
 export const metadata = {
-  title: "Főoldal",
+  title: "Főoldal | Rozin Rebeka",
   description: description,
 };
 
