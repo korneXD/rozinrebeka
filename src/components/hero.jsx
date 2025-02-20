@@ -16,12 +16,9 @@ export default function Hero() {
     >
       <div className="grid items-center gap-12 lg:grid-cols-5">
         <div className="space-y-6 lg:col-span-3">
-          <div className="relative flex items-center justify-start">
-            <Sparkles className="text-latte-dark absolute -top-3 -left-5 size-8 rotate-35" />
-            <h1 className="text-cappuccino z-10 font-serif text-5xl leading-tight md:text-6xl">
-              Fókuszban a <span className="italic">Bőröd</span>.
-            </h1>
-          </div>
+          <h1 className="text-cappuccino z-10 font-serif text-5xl leading-tight md:text-6xl">
+            Fókuszban a <span className="italic">Bőröd</span>.
+          </h1>
           <p className="text-cappuccino/80 text-lg">
             Luxus bőrápolási kezelések, amelyek kiemelik egyedi szépséged!
           </p>

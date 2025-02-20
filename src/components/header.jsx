@@ -41,8 +41,8 @@ export default function Header() {
       <nav className="text-cappuccino/80 hidden space-x-6 text-xl md:flex">
         {routes.map((e, i) => (
           <motion.div
-            initial={{ x: 100, y: -20, opacity: 0 }}
-            animate={{ x: 0, y: 0, opacity: 1 }}
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ delay: i * 0.7, duration: 1 }}
             key={i}
           >

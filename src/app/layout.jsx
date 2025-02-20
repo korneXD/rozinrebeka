@@ -10,7 +10,7 @@ export const metadata = {
   },
   description,
   keywords: [
-    "Kozmetikus",
+    "Fókuszban a bőröd",
     "Kozmetikus kecskemét környéke",
     "Rozin Rebeka",
     "Kozmetikus Izsák",
@@ -19,6 +19,9 @@ export const metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000",
   ),
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000",
+  },
   openGraph: {
     type: "website",
     locale: "hu_HU",

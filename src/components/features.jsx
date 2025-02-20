@@ -12,7 +12,7 @@ export default function Features() {
   return (
     <motion.section
       ref={ref}
-      animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+      animate={isInView ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
       className="bg-latte shadow-secondary-foreground relative mx-auto my-12 flex w-fit max-w-2xl flex-col items-center justify-center rounded-3xl px-4 py-8 shadow-sm select-none md:w-full md:flex-row"
     >
