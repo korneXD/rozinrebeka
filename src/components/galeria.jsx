@@ -26,14 +26,14 @@ export default function Galeria({ jsonLd }) {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.1, duration: 1 }}
-          className="text-cappuccino relative font-serif text-2xl italic"
+          className="text-cappuccino relative font-serif text-xl italic md:text-2xl"
         >
           Vess egy pillantást eddigi munkáimra!
           <Sparkles className="text-latte-dark absolute -top-1 -left-3 -z-10 -rotate-10" />
           <Sparkles className="text-latte-dark absolute -right-3 -bottom-1 -z-10 rotate-10" />
         </motion.h2>
         {images.length > 0 ? (
-          <div className="mx-auto max-w-4xl columns-5 space-y-4">
+          <div className="mx-auto max-w-4xl columns-2 space-y-4 px-4 md:columns-3 lg:columns-5">
             {images.map((e, i) => (
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
@@ -55,6 +55,9 @@ export default function Galeria({ jsonLd }) {
         ) : (
           <FaSpinner className="text-cappuccino size-12 animate-spin" />
         )}
+        <p className="text-cappuccino font-serif text-xl">
+          Egyenlőre a végére értél...
+        </p>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
