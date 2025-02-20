@@ -29,6 +29,9 @@ export default function Footer() {
           <Link href={tiktok} target="_blank">
             <FaTiktok className="text-cappuccino hover:text-cappuccino-light size-8 transition-all hover:scale-105" />
           </Link>
+          <Link target="_blank" href={maps}>
+            <MapPin className="text-cappuccino hover:text-cappuccino-light size-8 transition-all hover:scale-105" />
+          </Link>
         </div>
         <div className="border-cappuccino/10 text-cappuccino/60 text-md mt-8 w-full border-t pt-8 text-center font-serif">
           {year} - Rozin Rebeka
