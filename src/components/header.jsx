@@ -9,11 +9,11 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   const routes = [
-    { name: "Rólam", path: "/rolam" },
-    { name: "Szolgáltatásaim", path: "#services" },
-    { name: "Árlista", path: "/arlista" },
-    { name: "Galéria", path: "/galeria" },
-    { name: "Elérhetőség", path: "#contact" },
+    { name: "Rólam", path: "https://www.rozinrebeka.hu/rolam" },
+    { name: "Szolgáltatásaim", path: "https://www.rozinrebeka.hu/#services" },
+    { name: "Árlista", path: "https://www.rozinrebeka.hu/arlista" },
+    { name: "Galéria", path: "https://www.rozinrebeka.hu/galeria" },
+    { name: "Elérhetőség", path: "https://www.rozinrebeka.hu/#contact" },
   ];
 
   let navRef = useRef();
