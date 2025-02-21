@@ -55,9 +55,7 @@ export default function Galeria({ jsonLd }) {
         ) : (
           <FaSpinner className="text-cappuccino size-12 animate-spin" />
         )}
-        <p className="text-cappuccino font-serif text-xl">
-          Egyenlőre a végére értél...
-        </p>
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
