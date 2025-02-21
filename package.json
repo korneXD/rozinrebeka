@@ -13,6 +13,7 @@
     "@hotwired/stimulus": "^3.2.2",
     "@react-email/components": "^0.0.33",
     "@supabase/supabase-js": "^2.48.1",
+    "@vercel/analytics": "^1.5.0",
     "clsx": "^2.1.1",
     "fs": "^0.0.1-security",
     "lucide-react": "^0.475.0",

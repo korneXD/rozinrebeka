@@ -2,6 +2,7 @@ import "./globals.css";
 import { description, title } from "@/lib/constants";
 import React from "react";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: {
@@ -79,6 +80,7 @@ export default function RootLayout({ children }) {
           }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
