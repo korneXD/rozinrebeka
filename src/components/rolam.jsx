@@ -22,14 +22,12 @@ export default function Rolam({ jsonLd }) {
           <h2 className="text-cappuccino font-serif text-3xl">
             Rólam - <span className="italic">Rozin Rebeka</span>
           </h2>
-          <div className="group relative">
+          <div className="group relative h-96 w-full">
             <Image
               src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//hero.webp`}
-              className="shadow-cappuccino h-full w-fit rounded-xl object-cover shadow-xs transition-all group-hover:scale-101"
-              height={200}
-              width={200}
+              className="shadow-cappuccino absolute h-full w-fit rounded-xl object-cover shadow-xs transition-all group-hover:scale-101"
+              fill
               priority
-              quality={75}
               draggable={false}
               alt="Bőrápolás képe"
             />

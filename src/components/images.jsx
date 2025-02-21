@@ -62,7 +62,6 @@ export default function ImageSlider() {
                 fill
                 sizes="200x200"
                 draggable={false}
-                quality={75}
                 loading="lazy"
                 className="border-beige shadow-latte-dark z-10 w-full rounded-xl border-2 object-contain shadow-xs"
               />
@@ -72,7 +71,6 @@ export default function ImageSlider() {
                 width={100}
                 height={100}
                 draggable={false}
-                quality={1}
                 loading="lazy"
                 className="absolute aspect-[3/2] h-48 w-full rounded-xl object-cover p-0 blur-md md:h-72 md:w-lg"
               />

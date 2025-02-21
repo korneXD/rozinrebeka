@@ -35,12 +35,11 @@ export default function Reviews() {
           Vélemények Rólam
         </h3>
         <div className="mb-8 flex justify-center gap-6">
-          <div className="border-latte-dark bg-beige h-24 w-24 overflow-hidden rounded-full border-4">
+          <div className="border-latte-dark bg-beige relative h-24 w-24 overflow-hidden rounded-full border-4">
             <Image
               src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/alapok//rebeka2.webp`}
-              className="h-full w-full object-cover"
-              height={200}
-              width={200}
+              className="absolute h-full w-full object-cover"
+              fill
               draggable={false}
               loading="lazy"
               alt="Review"

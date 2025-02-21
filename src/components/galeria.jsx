@@ -46,7 +46,6 @@ export default function Galeria({ jsonLd }) {
                   alt={i}
                   height={300}
                   width={200}
-                  quality={75}
                   className="rounded-xl border transition-all hover:scale-105"
                 />
               </motion.div>
@@ -55,7 +54,7 @@ export default function Galeria({ jsonLd }) {
         ) : (
           <FaSpinner className="text-cappuccino size-12 animate-spin" />
         )}
-        
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

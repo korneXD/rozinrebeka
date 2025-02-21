@@ -38,7 +38,6 @@ export default function Hero() {
                 fill
                 sizes="200x200"
                 priority
-                quality={75}
                 draggable={false}
                 alt="Bőrápolás képe"
               />
