@@ -37,9 +37,9 @@ export default function Footer() {
         <div className="border-cappuccino/10 text-cappuccino/60 text-md mt-8 w-full border-t pt-8 text-center font-serif">
           {year} - Rozin Rebeka
         </div>
-        <p className="text-cappuccino font-serif text-sm">
-          Készítette: Halmosi Kornél
-        </p>
+        <button className="text-cappuccino font-serif text-sm">
+          Készítette: <Link src={"https://www.koresz.hu"}>koresz.hu</Link>
+        </button>
       </div>
     </motion.footer>
   );
