@@ -38,7 +38,10 @@ export default function Footer() {
           {year} - Rozin Rebeka
         </div>
         <button className="text-cappuccino font-serif text-sm">
-          Készítette: <Link src={"https://www.koresz.hu"}>koresz.hu</Link>
+          Készítette:{" "}
+          <Link href={"https://www.koresz.hu"} target="_blank">
+            koresz.hu
+          </Link>
         </button>
       </div>
     </motion.footer>
