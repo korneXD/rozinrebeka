@@ -16,5 +16,9 @@ const jsonLd = {
 };
 
 export default function ArlistaOldal() {
-  return <Arlista jsonLd={jsonLd} />;
+  return (
+    <div className="flex items-center justify-center">
+      <h1>Feltöltés alatt...</h1>
+    </div>
+  );
 }
